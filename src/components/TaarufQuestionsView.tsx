@@ -134,16 +134,19 @@ export const TaarufQuestionsView: React.FC = () => {
               >
                 {/* Header with copy button */}
                 <div className="p-4 bg-slate-50/70 border-b border-slate-100 flex items-start justify-between gap-3">
-                  <div>
-                    <div className="flex items-center gap-1.5 mb-1.5">
-                      <span className="text-[10px] font-black px-1.5 py-0.5 rounded-md bg-rose-850 text-white">
-                        #{idx + 1}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-xs font-black px-2.5 py-0.5 rounded-lg bg-rose-900 text-white shadow-2xs">
+                        Soalan #{item.questionNumber}
                       </span>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-rose-850 px-2 py-0.5 rounded-full bg-rose-50 border border-rose-200 inline-block">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-rose-850 px-2 py-0.5 rounded-full bg-rose-50 border border-rose-200">
                         {item.categoryLabel}
                       </span>
                     </div>
                     <h3 className="font-serif font-bold text-slate-900 text-sm sm:text-base leading-snug">
+                      <span className="text-rose-900 font-sans font-black mr-1.5 not-italic">
+                        Soalan {item.questionNumber}:
+                      </span>
                       "{item.question}"
                     </h3>
                   </div>

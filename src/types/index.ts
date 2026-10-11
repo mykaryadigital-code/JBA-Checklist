@@ -52,6 +52,7 @@ export interface JournalEntry {
 
 export interface TaarufQuestionItem {
   id: string;
+  questionNumber: number;
   category: string;
   categoryLabel: string;
   question: string;

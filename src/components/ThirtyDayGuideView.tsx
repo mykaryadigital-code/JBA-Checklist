@@ -283,7 +283,7 @@ export const ThirtyDayGuideView: React.FC = () => {
                 <div className="p-3 rounded-xl bg-rose-50/70 border border-rose-200/80">
                   <div className="flex items-center justify-between gap-2 mb-1.5">
                     <span className="font-bold text-rose-950 flex items-center gap-1">
-                      📋 Soalan Ta'aruf Disyorkan
+                      📋 Soalan Ta'aruf Hari {guide.day}
                     </span>
                     <button
                       onClick={() => handleCopyQuestion(guide.day, guide.taarufQuestion)}
@@ -303,6 +303,9 @@ export const ThirtyDayGuideView: React.FC = () => {
                     </button>
                   </div>
                   <blockquote className="italic text-slate-800 bg-white p-2.5 rounded-lg border border-rose-150 leading-relaxed font-serif text-[12px]">
+                    <strong className="font-sans font-black text-rose-900 not-italic mr-1.5">
+                      Soalan Hari {guide.day}:
+                    </strong>
                     "{guide.taarufQuestion}"
                   </blockquote>
                 </div>

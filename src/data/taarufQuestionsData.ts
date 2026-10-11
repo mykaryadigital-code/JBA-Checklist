@@ -4,6 +4,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   // --- KATEGORI 1: NIAT & MATLAMAT PERKAHWINAN ---
   {
     id: 'q1',
+    questionNumber: 1,
     category: 'niat',
     categoryLabel: 'Niat & Matlamat',
     question: 'Boleh kongsikan apa yang mendorong abang mahu berkahwin pada masa ini, dan apa visi rumahtangga sakinah yang abang impikan bersama?',
@@ -14,6 +15,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q2',
+    questionNumber: 2,
     category: 'niat',
     categoryLabel: 'Niat & Matlamat',
     question: 'Bagaimanakah corak amalan ibadah harian abang sekarang, dan bagaimana abang merancang memimpin ibadah keluarga kelak?',
@@ -24,6 +26,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q3',
+    questionNumber: 3,
     category: 'niat',
     categoryLabel: 'Niat & Matlamat',
     question: 'Apakah pandangan abang mengenai batasan ikhtilat dan adab pergaulan sepanjang tempoh ta\'aruf ini berlangsung?',
@@ -34,6 +37,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q4',
+    questionNumber: 4,
     category: 'niat',
     categoryLabel: 'Niat & Matlamat',
     question: 'Adakah abang bersedia mengikuti bimbingan rumahtangga, kursus keibubapaan, atau membaca buku ilmiah bersama demi memantapkan perkahwinan?',
@@ -46,6 +50,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   // --- KATEGORI 2: KEWANGAN & NAFKAH ---
   {
     id: 'q5',
+    questionNumber: 5,
     category: 'kewangan',
     categoryLabel: 'Kewangan & Nafkah',
     question: 'Bagaimanakah kefahaman abang mengenai kewajipan nafkah zahir menurut syarak, dan bagaimana perancangan belanjawan asas keluarga kita kelak?',
@@ -56,6 +61,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q6',
+    questionNumber: 6,
     category: 'kewangan',
     categoryLabel: 'Kewangan & Nafkah',
     question: 'Jika berlaku keadaan kecemasan atau kesempitan kewangan di masa hadapan, bagaimanakah cara abang mengatasinya tanpa menjejaskan keperluan asas keluarga?',
@@ -66,6 +72,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q7',
+    questionNumber: 7,
     category: 'kewangan',
     categoryLabel: 'Kewangan & Nafkah',
     question: 'Bagi memastikan kita dapat merancang belanjawan dengan telus, bolehkah kita kongsikan komitmen hutang semasa masing-masing (kereta, pinjaman peribadi, kad kredit)?',
@@ -76,6 +83,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q8',
+    questionNumber: 8,
     category: 'kewangan',
     categoryLabel: 'Kewangan & Nafkah',
     question: 'Apakah pandangan abang mengenai pemilikan harta dan wang simpanan peribadi isteri yang diperoleh daripada kerjayanya sendiri?',
@@ -86,6 +94,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q9',
+    questionNumber: 9,
     category: 'kewangan',
     categoryLabel: 'Kewangan & Nafkah',
     question: 'Selepas berkahwin, di manakah abang merancang untuk kita tinggal dan bagaimana pandangan abang tentang keperluan menyediakan rumah kediaman berasingan?',
@@ -98,6 +107,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   // --- KATEGORI 3: MARAH & EMOSI ---
   {
     id: 'q10',
+    questionNumber: 10,
     category: 'emosi',
     categoryLabel: 'Marah & Emosi',
     question: 'Apabila kita berselisih pendapat atau abang berasa sangat marah, bagaimanakah abang biasanya menenangkan diri dan menyelesaikan isu tersebut?',
@@ -108,6 +118,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q11',
+    questionNumber: 11,
     category: 'emosi',
     categoryLabel: 'Marah & Emosi',
     question: 'Bagaimanakah sikap abang apabila ditegur atau diingatkan mengenai kesilapan yang abang lakukan secara tidak sengaja?',
@@ -118,6 +129,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q12',
+    questionNumber: 12,
     category: 'emosi',
     categoryLabel: 'Marah & Emosi',
     question: 'Pernahkah abang menghadapi situasi di mana perancangan abang gagal sama sekali, dan bagaimana abang bertindak balas ketika itu?',
@@ -128,6 +140,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q13',
+    questionNumber: 13,
     category: 'emosi',
     categoryLabel: 'Marah & Emosi',
     question: 'Apakah yang abang lakukan apabila abang pulang ke rumah dalam keadaan sangat letih dan mengalami tekanan kerja yang teruk?',
@@ -138,6 +151,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q14',
+    questionNumber: 14,
     category: 'emosi',
     categoryLabel: 'Marah & Emosi',
     question: 'Bila kali terakhir abang memohon maaf kepada seseorang, dan apakah puncanya?',
@@ -150,8 +164,9 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   // --- KATEGORI 4: ANAK TIRI & KEIBUBAPAAN ---
   {
     id: 'q15',
+    questionNumber: 15,
     category: 'anak',
-    categoryLabel: 'Anak Tiri & Keibubapaan',
+    categoryLabel: 'Anak & Ibu Tunggal',
     question: 'Anak saya adalah keutamaan terbesar hidup saya. Bagaimanakah abang melihat peranan abang dalam mendidik dan membimbing anak saya kelak?',
     purpose: 'Menilai penerimaan tulus terhadap anak pasangan, kesabaran melayan jiwa anak kecil/remaja, serta keselamatan emosi anak.',
     greenFlagAnswer: '"Saya tahu anak awak adalah darah daging awak dan amanah Allah. Saya bersedia menjadi pelindung, kawan rapat, dan figur ayah yang menyayangi mereka tanpa membezakan."',
@@ -160,8 +175,9 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q16',
+    questionNumber: 16,
     category: 'anak',
-    categoryLabel: 'Anak Tiri & Keibubapaan',
+    categoryLabel: 'Anak & Ibu Tunggal',
     question: 'Bagaimanakah pendekatan abang dalam menegur atau mendisiplinkan anak pasangan jika mereka membuat kerenah atau kesalahan?',
     purpose: 'Mengesan risiko penderaan emosi atau kekasaran fizikal terhadap anak tiri.',
     greenFlagAnswer: '"Pendekatan saya adalah dengan nasihat berhikmah dan kasih sayang. Untuk disiplin utama, saya akan berbincang dahulu dengan awak sebagai ibu kandungnya."',
@@ -170,8 +186,9 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q17',
+    questionNumber: 17,
     category: 'anak',
-    categoryLabel: 'Anak Tiri & Keibubapaan (Duda)',
+    categoryLabel: 'Anak & Ibu Tunggal',
     question: 'Bagi anak-anak kandung abang bersama bekas isteri, bagaimanakah urusan nafkah bulanan dan hak giliran bermalam mereka diuruskan sekarang?',
     purpose: 'Menguji integriti calon duda dalam menunaikan hak darah dagingnya sendiri secara adil dan sah mengikut perintah mahkamah.',
     greenFlagAnswer: '"Setiap bulan saya konsisten masukkan nafkah anak ke akaun bank mengikut persetujuan mahkamah tanpa pernah culas. Mereka tetap tanggungjawab saya sampai bila-bila."',
@@ -180,8 +197,9 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q18',
+    questionNumber: 18,
     category: 'anak',
-    categoryLabel: 'Anak Tiri & Keibubapaan',
+    categoryLabel: 'Anak & Ibu Tunggal',
     question: 'Bagaimanakah corak komunikasi abang dengan bekas isteri mengenai urusan anak kandung abang sekarang?',
     purpose: 'Menilai sama ada calon telah berdamai dengan masa lalunya (healthy co-parenting) atau masih ada drama yang berlarutan.',
     greenFlagAnswer: '"Komunikasi kami terhad dan profesional semata-mata mengenai kebajikan, kesihatan dan persekolahan anak tanpa sebarang konflik peribadi."',
@@ -190,8 +208,9 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q19',
+    questionNumber: 19,
     category: 'anak',
-    categoryLabel: 'Anak Tiri & Keibubapaan',
+    categoryLabel: 'Anak & Ibu Tunggal',
     question: 'Apakah perancangan abang mengenai penambahan zuriat bersama selepas kita bernikah kelak?',
     purpose: 'Memastikan wujud persefahaman mengenai perancangan keluarga, kemampuan fizikal/kewangan, dan persetujuan bersama.',
     greenFlagAnswer: '"Saya terbuka berbincang mengikut kesediaan awak dan kesihatan, tanpa memaksa tergesa-gesa."',
@@ -202,6 +221,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   // --- KATEGORI 5: SEJARAH SILAM & PERCERAIAN ---
   {
     id: 'q20',
+    questionNumber: 20,
     category: 'silam',
     categoryLabel: 'Sejarah Silam',
     question: 'Apakah punca sebenar perpisahan perkahwinan lalu abang, dan apakah pengajaran terbesar yang abang pelajari daripada pengalaman tersebut?',
@@ -212,6 +232,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q21',
+    questionNumber: 21,
     category: 'silam',
     categoryLabel: 'Sejarah Silam',
     question: 'Bolehkah saya melihat dokumen sah perakuan cerai dari Mahkamah Syariah bagi memastikan urusan perundangan telah selesai sepenuhnya?',
@@ -222,6 +243,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q22',
+    questionNumber: 22,
     category: 'silam',
     categoryLabel: 'Sejarah Silam',
     question: 'Adakah terdapat sebarang kesilapan besar masa lalu atau rekod undang-undang yang perlu saya ketahui sebelum kita melangkah lebih jauh?',
@@ -234,6 +256,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   // --- KATEGORI 6: WALI & KELUARGA ---
   {
     id: 'q23',
+    questionNumber: 23,
     category: 'wali',
     categoryLabel: 'Wali & Keluarga',
     question: 'Keluarga dan wali saya ingin mengenali abang dengan lebih dekat. Bilakah waktu yang sesuai untuk abang datang bersemuka dengan bapa/wali saya?',
@@ -244,6 +267,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q24',
+    questionNumber: 24,
     category: 'wali',
     categoryLabel: 'Wali & Keluarga',
     question: 'Adakah keluarga dan ibu bapa abang sudah dimaklumkan tentang perkenalan kita, dan bagaimanakah penerimaan mereka?',
@@ -254,6 +278,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q25',
+    questionNumber: 25,
     category: 'wali',
     categoryLabel: 'Wali & Keluarga',
     question: 'Jika timbul perselisihan faham antara saya dan keluarga abang di masa hadapan, bagaimanakah cara abang memainkan peranan sebagai suami yang adil?',
@@ -264,6 +289,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q26',
+    questionNumber: 26,
     category: 'wali',
     categoryLabel: 'Wali & Keluarga',
     question: 'Bagaimanakah pandangan abang mengenai batasan privasi rumahtangga kita daripada diceritakan kepada adik-beradik atau ibu bapa?',
@@ -276,6 +302,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   // --- KATEGORI 7: KERJAYA & KEHIDUPAN SOSIAL ---
   {
     id: 'q27',
+    questionNumber: 27,
     category: 'kerjaya',
     categoryLabel: 'Kerjaya Isteri',
     question: 'Apakah pandangan abang mengenai kerjaya dan perkembangan diri saya selepas bernikah kelak?',
@@ -286,6 +313,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q28',
+    questionNumber: 28,
     category: 'kerjaya',
     categoryLabel: 'Kerjaya Isteri',
     question: 'Bagaimanakah pandangan abang tentang saya meluangkan masa bersama keluarga kandung dan sahabat wanita saya selepas berkahwin?',
@@ -296,6 +324,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q29',
+    questionNumber: 29,
     category: 'kerjaya',
     categoryLabel: 'Kerjaya Isteri',
     question: 'Bagaimanakah batas pergaulan abang sendiri bersama rakan sekerja berlainan jantina di tempat kerja mahupun media sosial?',
@@ -306,6 +335,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q30',
+    questionNumber: 30,
     category: 'kerjaya',
     categoryLabel: 'Kerjaya Isteri',
     question: 'Apakah pandangan abang mengenai privasi telefon pintar dan sikap memeriksa peranti pasangan tanpa izin?',
@@ -318,6 +348,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   // --- KATEGORI 8: KESIHATAN & GAYA HIDUP ---
   {
     id: 'q31',
+    questionNumber: 31,
     category: 'kesihatan',
     categoryLabel: 'Kesihatan & Tabiat',
     question: 'Apakah tabiat harian atau isu kesihatan fizikal dan emosi yang wajar saya ketahui untuk memastikan kita bersedia saling menyokong jangka panjang?',
@@ -328,6 +359,7 @@ export const TAARUF_QUESTIONS_DATA: TaarufQuestionItem[] = [
   },
   {
     id: 'q32',
+    questionNumber: 32,
     category: 'kesihatan',
     categoryLabel: 'Kesihatan & Tabiat',
     question: 'Di manakah abang melihat kehidupan kita, kerjaya, dan pendidikan anak-anak dalam tempoh 5 tahun yang akan datang?',
