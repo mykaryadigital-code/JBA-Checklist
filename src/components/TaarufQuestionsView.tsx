@@ -24,14 +24,15 @@ export const TaarufQuestionsView: React.FC = () => {
   };
 
   const categories = [
-    { key: 'all', label: 'Semua Soalan' },
-    { key: 'niat', label: 'Niat & Matlamat' },
-    { key: 'kewangan', label: 'Kewangan & Nafkah' },
-    { key: 'emosi', label: 'Marah & Emosi' },
-    { key: 'anak', label: 'Anak Tiri & Keibubapaan' },
-    { key: 'silam', label: 'Sejarah Silam' },
-    { key: 'wali', label: 'Wali & Keluarga' },
-    { key: 'kerjaya', label: 'Kerjaya Isteri' },
+    { key: 'all', label: `Semua (${TAARUF_QUESTIONS_DATA.length})` },
+    { key: 'niat', label: 'Niat & Matlamat (4)' },
+    { key: 'kewangan', label: 'Kewangan & Nafkah (5)' },
+    { key: 'emosi', label: 'Marah & Emosi (5)' },
+    { key: 'anak', label: 'Anak & Ibu Tunggal (5)' },
+    { key: 'silam', label: 'Sejarah Silam (3)' },
+    { key: 'wali', label: 'Wali & Keluarga (4)' },
+    { key: 'kerjaya', label: 'Kerjaya Isteri (4)' },
+    { key: 'kesihatan', label: 'Kesihatan & Tabiat (2)' },
   ];
 
   const filteredQuestions = TAARUF_QUESTIONS_DATA.filter(item => {
@@ -53,14 +54,19 @@ export const TaarufQuestionsView: React.FC = () => {
     <div className="space-y-4">
       {/* 1. Header Banner */}
       <div className="bg-gradient-to-br from-rose-900 to-rose-950 text-white p-4.5 rounded-2xl shadow-md shadow-rose-950/15">
-        <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-rose-800/80 border border-rose-700/50 text-[11px] font-semibold text-rose-200 w-fit">
-          <Sparkles className="w-3 h-3 text-rose-300" />
-          <span>Koleksi Soalan Ta'aruf Matang</span>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-rose-800/80 border border-rose-700/50 text-[11px] font-semibold text-rose-200">
+            <Sparkles className="w-3 h-3 text-rose-300" />
+            <span>Koleksi 32 Soalan Ta'aruf Matang</span>
+          </div>
+          <span className="text-xs font-bold text-rose-200">
+            {TAARUF_QUESTIONS_DATA.length} Soalan & Analisis
+          </span>
         </div>
 
         <h2 className="text-lg font-bold mt-2">Panduan Pertanyaan & Bedah Jawapan</h2>
         <p className="text-xs text-rose-200/90 mt-0.5 leading-relaxed">
-          Skrip soalan matang untuk mencungkil watak sebenar, berserta tanda jawapan jujur vs tanda bahaya.
+          32 skrip pertanyaan matang untuk mencungkil watak sebenar calon, dilengkapi tujuan syarak, tanda respon jujur (Green Flag), dan amaran manipulasi (Red Flag).
         </p>
       </div>
 
@@ -129,9 +135,14 @@ export const TaarufQuestionsView: React.FC = () => {
                 {/* Header with copy button */}
                 <div className="p-4 bg-slate-50/70 border-b border-slate-100 flex items-start justify-between gap-3">
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-rose-850 px-2 py-0.5 rounded-full bg-rose-50 border border-rose-200 inline-block mb-1.5">
-                      {item.categoryLabel}
-                    </span>
+                    <div className="flex items-center gap-1.5 mb-1.5">
+                      <span className="text-[10px] font-black px-1.5 py-0.5 rounded-md bg-rose-850 text-white">
+                        #{idx + 1}
+                      </span>
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-rose-850 px-2 py-0.5 rounded-full bg-rose-50 border border-rose-200 inline-block">
+                        {item.categoryLabel}
+                      </span>
+                    </div>
                     <h3 className="font-serif font-bold text-slate-900 text-sm sm:text-base leading-snug">
                       "{item.question}"
                     </h3>
