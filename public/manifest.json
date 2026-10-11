@@ -1,0 +1,16 @@
+{
+  "short_name": "Checklist Suami",
+  "name": "Checklist & Panduan Bakal Suami",
+  "description": "Panduan & Penilaian Calon Pasangan Hidup Berpandukan Tindakan & Syarak untuk Wanita Matang & Ibu Tunggal",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#be123c",
+  "background_color": "#f8fafc",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

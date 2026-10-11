@@ -1,0 +1,6 @@
+{
+  "name": "Checklist Bakal Suami",
+  "description": "Panduan & Penilaian Calon Pasangan Hidup Berpandukan Tindakan & Syarak untuk Wanita Matang & Ibu Tunggal",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
