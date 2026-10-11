@@ -45,9 +45,9 @@ export const BottomNav: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-pink-100 shadow-[0_-4px_20px_rgba(244,114,182,0.06)]">
-      <div className="max-w-xl mx-auto px-2">
-        <div className="grid grid-cols-5 items-center">
+    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t-2 border-[#fcc2d7] shadow-[0_-6px_25px_rgba(215,15,100,0.12)]">
+      <div className="max-w-xl mx-auto px-2.5 py-2">
+        <div className="grid grid-cols-5 items-stretch gap-1.5">
           {navItems.map(item => {
             const isActive = activeTab === item.id;
             return (
@@ -57,36 +57,31 @@ export const BottomNav: React.FC = () => {
                   setActiveTab(item.id);
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className={`flex flex-col items-center justify-center py-2.5 px-1 relative transition-colors group min-h-[60px] ${
-                  isActive ? 'text-pink-600 font-bold' : 'text-slate-400 hover:text-pink-500 font-medium'
+                className={`relative flex flex-col items-center justify-center py-2 px-1 rounded-xl transition-all duration-150 select-none cursor-pointer ${
+                  isActive
+                    ? 'bg-gradient-to-b from-[#ff2b85] to-[#d70f64] text-white border-t border-white/40 border-b-[4px] border-b-[#9f0747] shadow-[0_4px_12px_rgba(215,15,100,0.35)] -translate-y-1 active:translate-y-0.5 active:border-b-[1px]'
+                    : 'bg-gradient-to-b from-white to-slate-100/90 text-slate-600 hover:text-[#d70f64] border border-slate-200/90 border-b-[3.5px] border-b-slate-300 shadow-[0_2px_4px_rgba(0,0,0,0.04)] hover:bg-gradient-to-b hover:from-[#fff5f8] hover:to-[#ffe0eb] hover:border-[#fcc2d7] hover:border-b-[#f48fb1] active:translate-y-0.5 active:border-b-[1px]'
                 }`}
               >
-                <div className="relative">
-                  <div
-                    className={`p-1 rounded-xl transition-all ${
-                      isActive ? 'bg-pink-100/80 text-pink-600 scale-105' : 'group-hover:bg-pink-50/50'
-                    }`}
-                  >
+                <div className="relative flex items-center justify-center">
+                  <div className={`transition-transform duration-150 ${isActive ? 'scale-110 drop-shadow-sm' : ''}`}>
                     {item.icon}
                   </div>
                   {item.badge !== undefined && (
                     <span
-                      className={`absolute -top-1 -right-2 text-[9px] font-bold px-1.5 py-0.2 rounded-full leading-tight shrink-0 shadow-xs ${
+                      className={`absolute -top-2.5 -right-3 text-[8.5px] font-extrabold px-1.5 py-0.2 rounded-full leading-tight shrink-0 shadow-xs border ${
                         isActive
-                          ? 'bg-pink-500 text-white'
-                          : 'bg-slate-200 text-slate-700'
+                          ? 'bg-white text-[#d70f64] border-white/80 font-black'
+                          : 'bg-[#fff0f5] text-[#d70f64] border-[#fcc2d7]'
                       }`}
                     >
                       {item.badge}
                     </span>
                   )}
                 </div>
-                <span className="text-[10px] mt-1 tracking-tight truncate max-w-full">
+                <span className={`text-[10.5px] mt-1 tracking-tight truncate max-w-full ${isActive ? 'font-black text-white drop-shadow-xs' : 'font-semibold text-slate-600'}`}>
                   {item.label}
                 </span>
-                {isActive && (
-                  <div className="absolute bottom-0 w-8 h-0.5 bg-pink-500 rounded-t-full" />
-                )}
               </button>
             );
           })}

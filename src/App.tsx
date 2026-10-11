@@ -30,9 +30,9 @@ const MainContent: React.FC = () => {
 export default function App() {
   return (
     <AppProvider>
-      <div className="min-h-screen bg-pink-50/60 flex justify-center selection:bg-pink-200 selection:text-pink-900">
+      <div className="min-h-screen bg-[#fff0f5] flex justify-center selection:bg-[#ffbcd4] selection:text-[#d70f64]">
         {/* Mobile Viewport Container (Centered max-w-lg on desktop, full width on mobile) */}
-        <div className="w-full max-w-md md:max-w-lg bg-[#fffbfc] min-h-screen shadow-xl shadow-pink-900/5 border-x border-pink-100 flex flex-col relative">
+        <div className="w-full max-w-md md:max-w-lg bg-white min-h-screen shadow-xl shadow-[#d70f64]/15 border-x border-[#fcc2d7] flex flex-col relative">
           <Header />
           <div className="flex-1">
             <MainContent />

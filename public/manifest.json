@@ -4,8 +4,8 @@
   "description": "Kenali Tindakan, Bukan Kata-Kata - Panduan menilai calon pasangan hidup berpandukan bukti tindakan harian untuk wanita matang & ibu tunggal",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#be123c",
-  "background_color": "#f8fafc",
+  "theme_color": "#d70f64",
+  "background_color": "#fff0f5",
   "icons": [
     {
       "src": "/favicon.ico",

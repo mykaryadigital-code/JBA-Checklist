@@ -3,10 +3,15 @@
 :root {
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   color-scheme: light;
+  --panda-pink: #d70f64;
+  --panda-pink-light: #ff2b85;
+  --panda-pink-dark: #b80650;
+  --panda-pink-soft: #fff0f5;
+  --panda-pink-border: #fcc2d7;
 }
 
 body {
-  background-color: #f8fafc;
+  background-color: #fff2f7;
   color: #1e293b;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

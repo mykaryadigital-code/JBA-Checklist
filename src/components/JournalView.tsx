@@ -73,7 +73,7 @@ export const JournalView: React.FC = () => {
   return (
     <div className="space-y-4">
       {/* 1. Header Banner & Consistency Score */}
-      <div className="bg-gradient-to-br from-pink-500 via-rose-400 to-pink-500 text-white p-4.5 rounded-2xl shadow-md shadow-pink-500/20">
+      <div className="bg-gradient-to-r from-[#d70f64] via-[#e21b70] to-[#ff2b85] text-white p-4.5 rounded-2xl shadow-lg shadow-[#d70f64]/25">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/20 border border-white/30 text-[11px] font-semibold text-white">
             <Activity className="w-3 h-3 text-pink-100" />
@@ -118,7 +118,7 @@ export const JournalView: React.FC = () => {
       <div className="flex items-center justify-between gap-2">
         <button
           onClick={handleOpenModal}
-          className="flex-1 py-2.5 px-4 bg-pink-500 hover:bg-pink-600 text-white rounded-xl text-xs sm:text-sm font-semibold flex items-center justify-center gap-1.5 shadow-md shadow-pink-500/20 transition-colors"
+          className="flex-1 py-2.5 px-4 bg-gradient-to-b from-[#ff2b85] to-[#d70f64] hover:brightness-105 active:translate-y-0.5 active:border-b-[1px] text-white rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-1.5 border-t border-white/30 border-b-[4px] border-b-[#9f0747] shadow-[0_4px_12px_rgba(215,15,100,0.3)] transition-all cursor-pointer"
         >
           <Plus className="w-4 h-4" />
           <span>Catat Insiden Baharu</span>
@@ -131,7 +131,7 @@ export const JournalView: React.FC = () => {
           onClick={() => setStatusFilter('all')}
           className={`px-3 py-1.5 rounded-full font-medium whitespace-nowrap transition-colors ${
             statusFilter === 'all'
-              ? 'bg-pink-500 text-white font-bold'
+              ? 'bg-[#d70f64] text-white font-bold'
               : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
           }`}
         >
@@ -303,16 +303,16 @@ export const JournalView: React.FC = () => {
       {/* 4. Add Entry Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
-          <div className="bg-white rounded-2xl w-full max-w-md shadow-2xl overflow-hidden border border-rose-100 flex flex-col max-h-[90vh]">
+          <div className="bg-white rounded-2xl w-full max-w-md shadow-2xl overflow-hidden border border-[#fcc2d7] flex flex-col max-h-[90vh]">
             {/* Modal Header */}
-            <div className="bg-rose-900 text-white px-5 py-4 flex items-center justify-between">
+            <div className="bg-gradient-to-r from-[#d70f64] to-[#e21b70] text-white px-5 py-4 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <BookOpen className="w-5 h-5 text-rose-300" />
+                <BookOpen className="w-5 h-5 text-pink-100" />
                 <h3 className="font-semibold text-lg">Catat Insiden / Peristiwa</h3>
               </div>
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="text-rose-200 hover:text-white p-1 rounded-lg hover:bg-rose-800/50 transition-colors"
+                className="text-pink-100 hover:text-white p-1 rounded-lg hover:bg-white/20 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -477,13 +477,13 @@ export const JournalView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(false)}
-                  className="px-4 py-2 text-slate-600 hover:bg-slate-100 rounded-xl font-medium"
+                  className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold border border-slate-200 border-b-[3px] border-b-slate-300 active:translate-y-0.5 active:border-b-[1px] transition-all cursor-pointer"
                 >
                   Batal
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 bg-rose-800 hover:bg-rose-900 text-white rounded-xl font-semibold shadow-xs"
+                  className="px-5 py-2.5 bg-gradient-to-b from-[#ff2b85] to-[#d70f64] hover:brightness-105 text-white rounded-xl text-xs font-bold border-t border-white/30 border-b-[4px] border-b-[#9f0747] shadow-[0_4px_12px_rgba(215,15,100,0.3)] active:translate-y-0.5 active:border-b-[1px] transition-all cursor-pointer"
                 >
                   Simpan Catatan
                 </button>

@@ -53,7 +53,7 @@ export const TaarufQuestionsView: React.FC = () => {
   return (
     <div className="space-y-4">
       {/* 1. Header Banner */}
-      <div className="bg-gradient-to-br from-pink-500 via-rose-400 to-pink-500 text-white p-4.5 rounded-2xl shadow-md shadow-pink-500/20">
+      <div className="bg-gradient-to-r from-[#d70f64] via-[#e21b70] to-[#ff2b85] text-white p-4.5 rounded-2xl shadow-lg shadow-[#d70f64]/25">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/20 border border-white/30 text-[11px] font-semibold text-white">
             <Sparkles className="w-3 h-3 text-pink-100" />
@@ -78,7 +78,7 @@ export const TaarufQuestionsView: React.FC = () => {
           placeholder="Cari soalan mengikut topik atau kata kunci..."
           value={searchQuery}
           onChange={e => setSearchQuery(e.target.value)}
-          className="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-pink-400"
+          className="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#d70f64]"
         />
         {searchQuery && (
           <button
@@ -98,7 +98,7 @@ export const TaarufQuestionsView: React.FC = () => {
             onClick={() => setSelectedCategory(cat.key)}
             className={`px-3 py-1.5 rounded-full whitespace-nowrap font-medium transition-colors ${
               selectedCategory === cat.key
-                ? 'bg-pink-500 text-white font-bold shadow-xs'
+                ? 'bg-[#d70f64] text-white font-bold shadow-xs'
                 : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
             }`}
           >
@@ -118,7 +118,7 @@ export const TaarufQuestionsView: React.FC = () => {
                 setSelectedCategory('all');
                 setSearchQuery('');
               }}
-              className="mt-3 px-4 py-1.5 bg-pink-50 text-pink-700 rounded-lg text-xs font-semibold"
+              className="mt-3 px-4 py-1.5 bg-[#fff0f5] text-[#d70f64] rounded-lg text-xs font-semibold"
             >
               Lihat Semua Soalan
             </button>
@@ -136,15 +136,15 @@ export const TaarufQuestionsView: React.FC = () => {
                 <div className="p-4 bg-slate-50/70 border-b border-slate-100 flex items-start justify-between gap-3">
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="text-xs font-black px-2.5 py-0.5 rounded-lg bg-pink-500 text-white shadow-2xs">
+                      <span className="text-xs font-black px-2.5 py-0.5 rounded-lg bg-[#d70f64] text-white shadow-2xs">
                         Soalan #{item.questionNumber}
                       </span>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-pink-700 px-2 py-0.5 rounded-full bg-pink-50 border border-pink-200">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#d70f64] px-2 py-0.5 rounded-full bg-[#fff0f5] border border-[#fcc2d7]">
                         {item.categoryLabel}
                       </span>
                     </div>
                     <h3 className="font-serif font-bold text-slate-900 text-sm sm:text-base leading-snug">
-                      <span className="text-pink-600 font-sans font-black mr-1.5 not-italic">
+                      <span className="text-[#d70f64] font-sans font-black mr-1.5 not-italic">
                         Soalan {item.questionNumber}:
                       </span>
                       "{item.question}"
@@ -153,7 +153,7 @@ export const TaarufQuestionsView: React.FC = () => {
 
                   <button
                     onClick={() => handleCopy(item.id, item.question)}
-                    className="px-2.5 py-1.5 bg-white border border-slate-300 hover:bg-pink-50 hover:text-pink-700 text-slate-700 rounded-xl text-xs font-semibold flex items-center gap-1.5 shrink-0 shadow-2xs transition-colors"
+                    className="px-2.5 py-1.5 bg-white border border-slate-300 hover:bg-[#fff0f5] hover:text-[#d70f64] text-slate-700 rounded-xl text-xs font-semibold flex items-center gap-1.5 shrink-0 shadow-2xs transition-colors"
                   >
                     {isCopied ? (
                       <>

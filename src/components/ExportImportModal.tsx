@@ -72,9 +72,9 @@ export const ExportImportModal: React.FC<ExportImportModalProps> = ({ isOpen, on
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
-      <div className="bg-white rounded-2xl w-full max-w-md shadow-2xl overflow-hidden border border-rose-100 flex flex-col max-h-[90vh]">
+      <div className="bg-white rounded-2xl w-full max-w-md shadow-2xl overflow-hidden border border-[#fcc2d7] flex flex-col max-h-[90vh]">
         {/* Header */}
-        <div className="bg-gradient-to-r from-pink-500 to-rose-400 text-white px-5 py-4 flex items-center justify-between shadow-xs">
+        <div className="bg-gradient-to-r from-[#d70f64] via-[#e21b70] to-[#ff2b85] text-white px-5 py-4 flex items-center justify-between shadow-xs">
           <div className="flex items-center gap-2">
             <FileText className="w-5 h-5 text-pink-100" />
             <h3 className="font-semibold text-lg">Sandaran & Eksport Data</h3>
@@ -103,8 +103,8 @@ export const ExportImportModal: React.FC<ExportImportModalProps> = ({ isOpen, on
 
           {/* Export Section */}
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
-            <div className="flex items-center gap-2 text-rose-950 font-semibold text-sm">
-              <Download className="w-4 h-4 text-rose-700" />
+            <div className="flex items-center gap-2 text-slate-900 font-semibold text-sm">
+              <Download className="w-4 h-4 text-[#d70f64]" />
               <span>Eksport Data Calon (Simpan Fail)</span>
             </div>
             <p className="text-xs text-slate-600 leading-relaxed">
@@ -113,14 +113,14 @@ export const ExportImportModal: React.FC<ExportImportModalProps> = ({ isOpen, on
             <div className="flex gap-2">
               <button
                 onClick={handleDownloadJson}
-                className="flex-1 px-3 py-2.5 bg-rose-700 hover:bg-rose-800 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-colors"
+                className="flex-1 px-3 py-2.5 bg-gradient-to-b from-[#ff2b85] to-[#d70f64] hover:brightness-105 active:translate-y-0.5 active:border-b-[1px] text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 border-t border-white/30 border-b-[4px] border-b-[#9f0747] shadow-[0_4px_12px_rgba(215,15,100,0.3)] transition-all cursor-pointer"
               >
                 <Download className="w-4 h-4" />
                 Muat Turun Fail JSON
               </button>
               <button
                 onClick={handleCopyJson}
-                className="px-3 py-2.5 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-colors"
+                className="px-3 py-2.5 bg-slate-100 hover:bg-slate-200 active:translate-y-0.5 active:border-b-[1px] text-slate-700 rounded-xl text-xs font-semibold flex items-center gap-1.5 border border-slate-200 border-b-[3px] border-b-slate-300 transition-all cursor-pointer"
               >
                 {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
                 {copied ? 'Disalin!' : 'Salin JSON'}
@@ -146,9 +146,9 @@ export const ExportImportModal: React.FC<ExportImportModalProps> = ({ isOpen, on
             />
             <button
               onClick={() => fileInputRef.current?.click()}
-              className="w-full px-3 py-2.5 bg-white border border-emerald-600/40 hover:bg-emerald-50 text-emerald-800 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-colors"
+              className="w-full px-3 py-2.5 bg-emerald-600 hover:bg-emerald-700 active:translate-y-0.5 active:border-b-[1px] text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 border-t border-emerald-400 border-b-[4px] border-b-emerald-800 shadow-[0_4px_12px_rgba(5,150,105,0.25)] transition-all cursor-pointer"
             >
-              <Upload className="w-4 h-4 text-emerald-700" />
+              <Upload className="w-4 h-4 text-white" />
               Pilih & Muat Naik Fail JSON
             </button>
           </div>

@@ -11,9 +11,9 @@ export const GuideModal: React.FC<GuideModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
-      <div className="bg-white rounded-2xl w-full max-w-md shadow-2xl overflow-hidden border border-rose-100 flex flex-col max-h-[90vh]">
+      <div className="bg-white rounded-2xl w-full max-w-md shadow-2xl overflow-hidden border border-[#fcc2d7] flex flex-col max-h-[90vh]">
         {/* Header */}
-        <div className="bg-gradient-to-r from-pink-500 to-rose-400 text-white px-5 py-4 flex items-center justify-between shadow-xs">
+        <div className="bg-gradient-to-r from-[#d70f64] via-[#e21b70] to-[#ff2b85] text-white px-5 py-4 flex items-center justify-between shadow-xs">
           <div className="flex items-center gap-2">
             <HeartHandshake className="w-5 h-5 text-pink-100" />
             <h3 className="font-semibold text-base sm:text-lg">Panduan Penggunaan Aplikasi</h3>
@@ -95,7 +95,7 @@ export const GuideModal: React.FC<GuideModalProps> = ({ isOpen, onClose }) => {
           <div className="pt-2 border-t border-slate-200">
             <button
               onClick={onClose}
-              className="w-full py-2.5 bg-pink-500 hover:bg-pink-600 text-white rounded-xl text-xs font-semibold shadow-md shadow-pink-500/20 transition-colors"
+              className="w-full py-2.5 bg-gradient-to-b from-[#ff2b85] to-[#d70f64] hover:brightness-105 text-white rounded-xl text-xs font-bold border-t border-white/30 border-b-[4px] border-b-[#9f0747] shadow-[0_4px_12px_rgba(215,15,100,0.3)] active:translate-y-0.5 active:border-b-[1px] transition-all cursor-pointer"
             >
               Faham & Mula Menilai
             </button>

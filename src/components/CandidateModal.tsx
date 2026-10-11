@@ -71,9 +71,9 @@ export const CandidateModal: React.FC<CandidateModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
-      <div className="bg-white rounded-2xl w-full max-w-md shadow-2xl overflow-hidden border border-rose-100 flex flex-col max-h-[90vh]">
+      <div className="bg-white rounded-2xl w-full max-w-md shadow-2xl overflow-hidden border border-[#fcc2d7] flex flex-col max-h-[90vh]">
         {/* Modal Header */}
-        <div className="bg-gradient-to-r from-pink-500 to-rose-400 text-white px-5 py-4 flex items-center justify-between shadow-xs">
+        <div className="bg-gradient-to-r from-[#d70f64] via-[#e21b70] to-[#ff2b85] text-white px-5 py-4 flex items-center justify-between shadow-xs">
           <div className="flex items-center gap-2.5">
             {candidateToEdit ? (
               <Edit3 className="w-5 h-5 text-pink-100" />
@@ -149,7 +149,7 @@ export const CandidateModal: React.FC<CandidateModalProps> = ({
               placeholder="Contoh: Jurutera Perisian / Penjawat Awam"
               value={occupation}
               onChange={e => setOccupation(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-rose-700 text-sm"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#d70f64] text-sm"
             />
           </div>
 
@@ -162,7 +162,7 @@ export const CandidateModal: React.FC<CandidateModalProps> = ({
               placeholder="Contoh: Shah Alam, Selangor"
               value={location}
               onChange={e => setLocation(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-rose-700 text-sm"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#d70f64] text-sm"
             />
           </div>
 
@@ -175,7 +175,7 @@ export const CandidateModal: React.FC<CandidateModalProps> = ({
               placeholder="Contoh: Dikenalkan oleh rakan sekerja, berasal dari Kedah, ada 1 orang anak..."
               value={notes}
               onChange={e => setNotes(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-rose-700 text-sm resize-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#d70f64] text-sm resize-none"
             />
           </div>
 
@@ -201,13 +201,13 @@ export const CandidateModal: React.FC<CandidateModalProps> = ({
               <button
                 type="button"
                 onClick={onClose}
-                className="px-4 py-2.5 text-slate-600 hover:bg-slate-100 rounded-xl text-sm font-medium transition-colors"
+                className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-sm font-semibold border border-slate-200 border-b-[3px] border-b-slate-300 active:translate-y-0.5 active:border-b-[1px] transition-all cursor-pointer"
               >
                 Batal
               </button>
               <button
                 type="submit"
-                className="px-5 py-2.5 bg-pink-500 hover:bg-pink-600 text-white rounded-xl text-sm font-semibold shadow-md shadow-pink-500/20 transition-colors"
+                className="px-5 py-2.5 bg-gradient-to-b from-[#ff2b85] to-[#d70f64] hover:brightness-105 active:translate-y-0.5 active:border-b-[1px] text-white rounded-xl text-sm font-bold border-t border-white/30 border-b-[4px] border-b-[#9f0747] shadow-[0_4px_12px_rgba(215,15,100,0.3)] transition-all cursor-pointer"
               >
                 {candidateToEdit ? 'Simpan Perubahan' : 'Tambah Calon'}
               </button>

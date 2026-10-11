@@ -53,7 +53,7 @@ export const AnalysisView: React.FC = () => {
   return (
     <div className="space-y-4">
       {/* 1. Main Score Meter Card */}
-      <div className="bg-gradient-to-br from-pink-500 via-rose-400 to-pink-500 text-white p-5 rounded-2xl shadow-md shadow-pink-500/20">
+      <div className="bg-gradient-to-r from-[#d70f64] via-[#e21b70] to-[#ff2b85] text-white p-5 rounded-2xl shadow-lg shadow-[#d70f64]/25">
         <div className="text-center">
           <span className="text-[11px] uppercase tracking-wider font-bold text-pink-100 block mb-1">
             Indeks Skor Kelayakan Calon

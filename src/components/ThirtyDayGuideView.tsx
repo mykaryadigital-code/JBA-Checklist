@@ -52,7 +52,7 @@ export const ThirtyDayGuideView: React.FC = () => {
   return (
     <div className="space-y-4">
       {/* 1. Kad Kemajuan (Progress Header) */}
-      <div className="bg-gradient-to-br from-pink-500 via-rose-400 to-pink-500 text-white p-4.5 rounded-2xl shadow-md shadow-pink-500/20">
+      <div className="bg-gradient-to-r from-[#d70f64] via-[#e21b70] to-[#ff2b85] text-white p-4.5 rounded-2xl shadow-lg shadow-[#d70f64]/25">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/20 border border-white/30 text-[11px] font-semibold text-white">
             <Sparkles className="w-3 h-3 text-pink-100" />
@@ -94,10 +94,10 @@ export const ThirtyDayGuideView: React.FC = () => {
       </div>
 
       {/* 2. Matriks Grid 30 Hari (Peta H1 hingga H30) */}
-      <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs">
+      <div className="bg-white rounded-2xl p-4 border border-[#fcc2d7] shadow-xs">
         <div className="flex items-center justify-between mb-2.5">
           <h3 className="font-bold text-slate-800 text-xs sm:text-sm flex items-center gap-1.5">
-            <CalendarCheck className="w-4 h-4 text-pink-500" />
+            <CalendarCheck className="w-4 h-4 text-[#d70f64]" />
             Matriks Peta 30 Hari (Tekan Untuk Lompat)
           </h3>
           <span className="text-[11px] text-slate-500">
@@ -117,8 +117,8 @@ export const ThirtyDayGuideView: React.FC = () => {
                   isCompleted
                     ? 'bg-emerald-600 text-white shadow-xs'
                     : isSelected
-                    ? 'bg-pink-500 text-white ring-2 ring-pink-300'
-                    : 'bg-slate-100 hover:bg-pink-50 text-slate-700 border border-slate-200/60'
+                    ? 'bg-[#d70f64] text-white ring-2 ring-[#ff2b85]'
+                    : 'bg-slate-100 hover:bg-[#fff0f5] text-slate-700 border border-slate-200/60'
                 }`}
                 title={`Hari ${d.day}: ${d.title}`}
               >
@@ -138,7 +138,7 @@ export const ThirtyDayGuideView: React.FC = () => {
             <span>Selesai</span>
           </div>
           <div className="flex items-center gap-1">
-            <span className="w-2.5 h-2.5 rounded bg-pink-500 inline-block" />
+            <span className="w-2.5 h-2.5 rounded bg-[#d70f64] inline-block" />
             <span>Sedang Dilihat</span>
           </div>
           <div className="flex items-center gap-1">
@@ -154,7 +154,7 @@ export const ThirtyDayGuideView: React.FC = () => {
           onClick={() => setSelectedPhase('all')}
           className={`px-3 py-1.5 rounded-full font-medium whitespace-nowrap transition-colors flex items-center gap-1 ${
             selectedPhase === 'all'
-              ? 'bg-pink-500 text-white font-bold shadow-xs'
+              ? 'bg-[#d70f64] text-white font-bold shadow-xs'
               : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
           }`}
         >
@@ -165,7 +165,7 @@ export const ThirtyDayGuideView: React.FC = () => {
           onClick={() => setSelectedPhase(1)}
           className={`px-3 py-1.5 rounded-full font-medium whitespace-nowrap transition-colors ${
             selectedPhase === 1
-              ? 'bg-pink-500 text-white font-bold shadow-xs'
+              ? 'bg-[#d70f64] text-white font-bold shadow-xs'
               : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
           }`}
         >
@@ -175,7 +175,7 @@ export const ThirtyDayGuideView: React.FC = () => {
           onClick={() => setSelectedPhase(2)}
           className={`px-3 py-1.5 rounded-full font-medium whitespace-nowrap transition-colors ${
             selectedPhase === 2
-              ? 'bg-pink-500 text-white font-bold shadow-xs'
+              ? 'bg-[#d70f64] text-white font-bold shadow-xs'
               : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
           }`}
         >
@@ -185,7 +185,7 @@ export const ThirtyDayGuideView: React.FC = () => {
           onClick={() => setSelectedPhase(3)}
           className={`px-3 py-1.5 rounded-full font-medium whitespace-nowrap transition-colors ${
             selectedPhase === 3
-              ? 'bg-pink-500 text-white font-bold shadow-xs'
+              ? 'bg-[#d70f64] text-white font-bold shadow-xs'
               : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
           }`}
         >
@@ -195,7 +195,7 @@ export const ThirtyDayGuideView: React.FC = () => {
           onClick={() => setSelectedPhase(4)}
           className={`px-3 py-1.5 rounded-full font-medium whitespace-nowrap transition-colors ${
             selectedPhase === 4
-              ? 'bg-pink-500 text-white font-bold shadow-xs'
+              ? 'bg-[#d70f64] text-white font-bold shadow-xs'
               : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
           }`}
         >
@@ -205,7 +205,7 @@ export const ThirtyDayGuideView: React.FC = () => {
           onClick={() => setSelectedPhase(5)}
           className={`px-3 py-1.5 rounded-full font-medium whitespace-nowrap transition-colors ${
             selectedPhase === 5
-              ? 'bg-pink-500 text-white font-bold shadow-xs'
+              ? 'bg-[#d70f64] text-white font-bold shadow-xs'
               : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
           }`}
         >
@@ -238,13 +238,13 @@ export const ThirtyDayGuideView: React.FC = () => {
                     className={`w-8 h-8 rounded-xl font-black text-xs flex items-center justify-center shrink-0 ${
                       isDone
                         ? 'bg-emerald-600 text-white shadow-xs'
-                        : 'bg-rose-850 text-white'
+                        : 'bg-[#d70f64] text-white shadow-2xs'
                     }`}
                   >
                     H{guide.day}
                   </span>
                   <div>
-                    <span className="text-[10px] font-semibold uppercase tracking-wider text-rose-850 block">
+                    <span className="text-[10px] font-black uppercase tracking-wider text-[#d70f64] block">
                       {guide.phaseName}
                     </span>
                     <h3 className="font-bold text-slate-900 text-sm sm:text-base leading-snug">
@@ -280,14 +280,14 @@ export const ThirtyDayGuideView: React.FC = () => {
                 </div>
 
                 {/* 📋 Soalan Ta'aruf & Copy Button */}
-                <div className="p-3 rounded-xl bg-rose-50/70 border border-rose-200/80">
+                <div className="p-3 rounded-xl bg-[#fff0f5] border border-[#fcc2d7]">
                   <div className="flex items-center justify-between gap-2 mb-1.5">
-                    <span className="font-bold text-rose-950 flex items-center gap-1">
+                    <span className="font-bold text-[#b80650] flex items-center gap-1">
                       📋 Soalan Ta'aruf Hari {guide.day}
                     </span>
                     <button
                       onClick={() => handleCopyQuestion(guide.day, guide.taarufQuestion)}
-                      className="px-2.5 py-1 bg-white border border-rose-300 text-rose-850 hover:bg-rose-100/60 rounded-lg text-[11px] font-semibold flex items-center gap-1 transition-colors shrink-0 shadow-2xs"
+                      className="px-2.5 py-1 bg-white border border-[#fcc2d7] text-[#d70f64] hover:bg-[#ffe0ec] rounded-lg text-[11px] font-semibold flex items-center gap-1 transition-colors shrink-0 shadow-2xs"
                     >
                       {copiedDay === guide.day ? (
                         <>
@@ -302,8 +302,8 @@ export const ThirtyDayGuideView: React.FC = () => {
                       )}
                     </button>
                   </div>
-                  <blockquote className="italic text-slate-800 bg-white p-2.5 rounded-lg border border-rose-150 leading-relaxed font-serif text-[12px]">
-                    <strong className="font-sans font-black text-rose-900 not-italic mr-1.5">
+                  <blockquote className="italic text-slate-800 bg-white p-2.5 rounded-lg border border-[#fcc2d7] leading-relaxed font-serif text-[12px]">
+                    <strong className="font-sans font-black text-[#d70f64] not-italic mr-1.5">
                       Soalan Hari {guide.day}:
                     </strong>
                     "{guide.taarufQuestion}"
@@ -342,7 +342,7 @@ export const ThirtyDayGuideView: React.FC = () => {
                     placeholder={`Tulis jawapan calon, responnya atau perbualan untuk Hari ${guide.day}...`}
                     value={userRec.notes || ''}
                     onChange={e => updateDayNotes(guide.day, e.target.value)}
-                    className="w-full px-3 py-2 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-rose-700 resize-none"
+                    className="w-full px-3 py-2 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#d70f64] resize-none"
                   />
                   {userRec.completedAt && (
                     <div className="text-[10px] text-emerald-700 font-medium mt-1">
