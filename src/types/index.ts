@@ -32,6 +32,7 @@ export interface DayGuide {
 
 export interface DayUserRecord {
   completed: boolean;
+  rating?: CriterionRating; // 'unrated' | 'green' | 'red'
   notes: string;
   completedAt?: string;
 }

@@ -6,7 +6,9 @@ import {
   ShieldCheck, 
   Scale, 
   HelpCircle, 
-  HeartHandshake
+  HeartHandshake,
+  Calendar,
+  ChevronRight
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { CRITERIA_DATA } from '../data/criteriaData';
@@ -257,7 +259,46 @@ export const AnalysisView: React.FC = () => {
         </div>
       </div>
 
-      {/* 5. Jurnal & Panduan Syarak Istikharah */}
+      {/* 5. Status Perjalanan 30 Hari Mengenal Calon */}
+      <div className="bg-white rounded-2xl p-4 border border-[#fcc2d7] shadow-xs space-y-3">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
+            <Calendar className="w-4 h-4 text-[#d70f64]" />
+            <span>Kemajuan Perjalanan 30 Hari</span>
+          </div>
+          <span className="text-xs font-bold text-[#d70f64]">
+            {stats.completedDaysCount} / 30 Hari Selesai
+          </span>
+        </div>
+
+        <div className="grid grid-cols-3 gap-2 text-center text-xs">
+          <div className="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200">
+            <div className="text-[10px] text-emerald-800 font-bold uppercase tracking-wider">Green Flag</div>
+            <div className="text-base font-black text-emerald-700 mt-0.5">🟢 {stats.dayGreenCount}</div>
+            <div className="text-[10px] text-emerald-600 mt-0.5">Langkah Positif</div>
+          </div>
+          <div className="p-2.5 rounded-xl bg-rose-50 border border-rose-200">
+            <div className="text-[10px] text-rose-800 font-bold uppercase tracking-wider">Red Flag</div>
+            <div className="text-base font-black text-rose-700 mt-0.5">🔴 {stats.dayRedCount}</div>
+            <div className="text-[10px] text-rose-600 mt-0.5">Tanda Amaran</div>
+          </div>
+          <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
+            <div className="text-[10px] text-slate-600 font-bold uppercase tracking-wider">Belum Dinilai</div>
+            <div className="text-base font-black text-slate-700 mt-0.5">⚪ {stats.dayUnratedCount}</div>
+            <div className="text-[10px] text-slate-500 mt-0.5">Dalam Proses</div>
+          </div>
+        </div>
+
+        <button
+          onClick={() => setActiveTab('guide30')}
+          className="w-full py-2 px-3 bg-[#fff0f5] hover:bg-[#ffe0ec] border border-[#fcc2d7] text-[#d70f64] rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+        >
+          <span>Buka Panduan 30 Hari & Nilai Langkah Seterusnya</span>
+          <ChevronRight className="w-3.5 h-3.5" />
+        </button>
+      </div>
+
+      {/* 6. Panduan Syarak Istikharah & Musyawarah */}
       <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs space-y-3">
         <div className="flex items-center gap-2 text-rose-950 font-bold text-sm">
           <HeartHandshake className="w-4 h-4 text-rose-700" />

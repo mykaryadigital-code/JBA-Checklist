@@ -21,6 +21,7 @@ interface AppContextType {
   rateCriterion: (criterionId: number, rating: CriterionRating, notes?: string) => void;
   updateCriterionNotes: (criterionId: number, notes: string) => void;
   toggleDayCompletion: (day: number, notes?: string) => void;
+  rateDay: (day: number, rating: CriterionRating, notes?: string) => void;
   updateDayNotes: (day: number, notes: string) => void;
   addJournalEntry: (entry: Omit<JournalEntry, 'id' | 'candidateId' | 'createdAt'>) => void;
   deleteJournalEntry: (id: string) => void;
@@ -38,6 +39,9 @@ interface AppContextType {
     criticalRedFlags: number;
     categoryScores: Record<string, { total: number; green: number; red: number; percentage: number }>;
     completedDaysCount: number;
+    dayGreenCount: number;
+    dayRedCount: number;
+    dayUnratedCount: number;
     journalCount: number;
     consistentJournalCount: number;
     consistencyRate: number;
@@ -158,8 +162,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         ...prev,
         candidates: prev.candidates.map(c => {
           if (c.id !== prev.activeCandidateId) return c;
-          const currentRec = c.dayProgress[day] || { completed: false, notes: '' };
+          const currentRec = c.dayProgress[day] || { completed: false, notes: '', rating: 'unrated' };
           const nextCompleted = !currentRec.completed;
+          const nextRating: CriterionRating = nextCompleted 
+            ? (currentRec.rating && currentRec.rating !== 'unrated' ? currentRec.rating : 'green') 
+            : 'unrated';
           return {
             ...c,
             dayProgress: {
@@ -167,8 +174,35 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
               [day]: {
                 ...currentRec,
                 completed: nextCompleted,
+                rating: nextRating,
                 notes: notes !== undefined ? notes : currentRec.notes,
                 completedAt: nextCompleted ? new Date().toISOString().split('T')[0] : undefined,
+              },
+            },
+          };
+        }),
+      };
+    });
+  };
+
+  const rateDay = (day: number, rating: CriterionRating, notes?: string) => {
+    setState(prev => {
+      return {
+        ...prev,
+        candidates: prev.candidates.map(c => {
+          if (c.id !== prev.activeCandidateId) return c;
+          const currentRec = c.dayProgress[day] || { completed: false, notes: '', rating: 'unrated' };
+          const isCompleted = rating === 'green' || rating === 'red';
+          return {
+            ...c,
+            dayProgress: {
+              ...c.dayProgress,
+              [day]: {
+                ...currentRec,
+                rating,
+                completed: isCompleted,
+                notes: notes !== undefined ? notes : currentRec.notes,
+                completedAt: isCompleted ? (currentRec.completedAt || new Date().toISOString().split('T')[0]) : undefined,
               },
             },
           };
@@ -312,8 +346,25 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     const rawScore = Math.max(0, Math.round(((greenCount - redCount * 1.5) / totalCriteria) * 100));
     const scorePercentage = Math.min(100, Math.max(0, rawScore));
 
-    // 30-day completed count
-    const completedDaysCount = Object.values(activeCandidate?.dayProgress || {}).filter(d => d.completed).length;
+    // 30-day completed and rating counts
+    let dayGreenCount = 0;
+    let dayRedCount = 0;
+    let completedDaysCount = 0;
+    for (let i = 1; i <= 30; i++) {
+      const rec = activeCandidate?.dayProgress?.[i];
+      const r = rec?.rating || (rec?.completed ? 'green' : 'unrated');
+      if (r === 'green') {
+        dayGreenCount += 1;
+        completedDaysCount += 1;
+      } else if (r === 'red') {
+        dayRedCount += 1;
+        completedDaysCount += 1;
+      } else if (rec?.completed) {
+        dayGreenCount += 1;
+        completedDaysCount += 1;
+      }
+    }
+    const dayUnratedCount = 30 - (dayGreenCount + dayRedCount);
 
     // Journal stats
     const journals = activeCandidate?.journal || [];
@@ -331,6 +382,9 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       criticalRedFlags,
       categoryScores: catStats,
       completedDaysCount,
+      dayGreenCount,
+      dayRedCount,
+      dayUnratedCount,
       journalCount,
       consistentJournalCount,
       consistencyRate,
@@ -352,6 +406,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         rateCriterion,
         updateCriterionNotes,
         toggleDayCompletion,
+        rateDay,
         updateDayNotes,
         addJournalEntry,
         deleteJournalEntry,

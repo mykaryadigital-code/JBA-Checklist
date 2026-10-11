@@ -39,13 +39,13 @@ export const INITIAL_SAMPLE_CANDIDATE: Candidate = {
     25: { rating: 'green', notes: 'Mempunyai perancangan simpanan haji dan rumah keluarga 5 tahun ke depan.', updatedAt: '2026-10-11' },
   },
   dayProgress: {
-    1: { completed: true, notes: 'Niat ta\'aruf telah dinyatakan dengan jelas. Matlamatnya serius mahu berkahwin dalam tempoh 6 bulan.', completedAt: '2026-10-02' },
-    2: { completed: true, notes: 'Komunikasi dihadkan hanya waktu siang hingga 9.30 malam sahaja. Dia sangat menghormati peraturan ini.', completedAt: '2026-10-03' },
-    3: { completed: true, notes: 'Dokumen cerai telah disahkan sah oleh peguam syarie kenalan.', completedAt: '2026-10-04' },
-    4: { completed: true, notes: 'Terbukti menjaga solat lima waktu walaupun ketika dalam urusan mesyuarat luar.', completedAt: '2026-10-05' },
-    5: { completed: true, notes: 'Dia menerima anak saya dengan hati terbuka dan faham komitmen seorang ibu.', completedAt: '2026-10-06' },
-    6: { completed: true, notes: 'Tiada sebarang tabiat merokok atau vape. Gaya hidup sihat berbasikal.', completedAt: '2026-10-07' },
-    7: { completed: true, notes: 'Rumusan Minggu 1: Sangat konsisten dan tenang.', completedAt: '2026-10-08' },
+    1: { completed: true, rating: 'green', notes: 'Niat ta\'aruf telah dinyatakan dengan jelas. Matlamatnya serius mahu berkahwin dalam tempoh 6 bulan.', completedAt: '2026-10-02' },
+    2: { completed: true, rating: 'green', notes: 'Komunikasi dihadkan hanya waktu siang hingga 9.30 malam sahaja. Dia sangat menghormati peraturan ini.', completedAt: '2026-10-03' },
+    3: { completed: true, rating: 'green', notes: 'Dokumen cerai telah disahkan sah oleh peguam syarie kenalan.', completedAt: '2026-10-04' },
+    4: { completed: true, rating: 'green', notes: 'Terbukti menjaga solat lima waktu walaupun ketika dalam urusan mesyuarat luar.', completedAt: '2026-10-05' },
+    5: { completed: true, rating: 'green', notes: 'Dia menerima anak saya dengan hati terbuka dan faham komitmen seorang ibu.', completedAt: '2026-10-06' },
+    6: { completed: true, rating: 'green', notes: 'Tiada sebarang tabiat merokok atau vape. Gaya hidup sihat berbasikal.', completedAt: '2026-10-07' },
+    7: { completed: true, rating: 'green', notes: 'Rumusan Minggu 1: Sangat konsisten dan tenang.', completedAt: '2026-10-08' },
   },
   journal: [
     {
