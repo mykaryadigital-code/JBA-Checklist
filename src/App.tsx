@@ -33,8 +33,8 @@ export default function App() {
     <AppProvider>
       <OfflineIndicator />
       <div className="min-h-screen bg-[#fff0f5] flex justify-center selection:bg-[#ffbcd4] selection:text-[#d70f64]">
-        {/* Mobile Viewport Container (Centered max-w-lg on desktop, full width on mobile) */}
-        <div className="w-full max-w-md md:max-w-lg bg-white min-h-screen shadow-xl shadow-[#d70f64]/15 border-x border-[#fcc2d7] flex flex-col relative">
+        {/* Viewport Container (Generous, responsive width on tablet & desktop) */}
+        <div className="w-full max-w-xl md:max-w-2xl lg:max-w-3xl bg-white min-h-screen shadow-xl shadow-[#d70f64]/15 border-x border-[#fcc2d7] flex flex-col relative">
           <Header />
           <div className="flex-1">
             <MainContent />

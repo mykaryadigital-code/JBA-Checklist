@@ -143,7 +143,7 @@ export const TaarufQuestionsView: React.FC = () => {
                         {item.categoryLabel}
                       </span>
                     </div>
-                    <h3 className="font-bold text-slate-900 text-sm sm:text-base leading-snug">
+                    <h3 className="font-bold text-slate-900 text-[13px] sm:text-sm leading-snug">
                       <span className="text-[#d70f64] font-black mr-1.5">
                         Soalan {item.questionNumber}:
                       </span>
@@ -182,26 +182,29 @@ export const TaarufQuestionsView: React.FC = () => {
                     </p>
                   </div>
 
-                  {/* 🟢 Tanda Jawapan Matang (Green Flag) */}
-                  <div className="p-3 rounded-xl bg-emerald-50/80 border border-emerald-200 text-emerald-950">
-                    <div className="flex items-center gap-1 font-bold text-emerald-900 mb-1">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                      <span>Tanda Jawapan Matang (Green Flag):</span>
+                  {/* 🟢 Green Flag & 🔴 Red Flag in 2-Column Grid (Eliminates right-side emptiness) */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+                    {/* 🟢 Tanda Jawapan Matang (Green Flag) */}
+                    <div className="p-3 rounded-xl bg-emerald-50/80 border border-emerald-200 text-emerald-950 flex flex-col">
+                      <div className="flex items-center gap-1 font-bold text-emerald-900 mb-1">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                        <span>Tanda Jawapan Matang (Green Flag):</span>
+                      </div>
+                      <p className="italic leading-relaxed flex-1">
+                        {item.greenFlagAnswer}
+                      </p>
                     </div>
-                    <p className="italic leading-relaxed">
-                      {item.greenFlagAnswer}
-                    </p>
-                  </div>
 
-                  {/* 🔴 Tanda Jawapan Bahaya / Manipulatif (Red Flag) */}
-                  <div className="p-3 rounded-xl bg-rose-50/80 border border-rose-200 text-rose-950">
-                    <div className="flex items-center gap-1 font-bold text-rose-900 mb-1">
-                      <AlertTriangle className="w-3.5 h-3.5 text-rose-600 shrink-0" />
-                      <span>Tanda Jawapan Manipulatif / Bahaya (Red Flag):</span>
+                    {/* 🔴 Tanda Jawapan Bahaya / Manipulatif (Red Flag) */}
+                    <div className="p-3 rounded-xl bg-rose-50/80 border border-rose-200 text-rose-950 flex flex-col">
+                      <div className="flex items-center gap-1 font-bold text-rose-900 mb-1">
+                        <AlertTriangle className="w-3.5 h-3.5 text-rose-600 shrink-0" />
+                        <span>Tanda Jawapan Bahaya (Red Flag):</span>
+                      </div>
+                      <p className="italic leading-relaxed flex-1">
+                        {item.redFlagAnswer}
+                      </p>
                     </div>
-                    <p className="italic leading-relaxed">
-                      {item.redFlagAnswer}
-                    </p>
                   </div>
 
                   {/* 💡 Petua Pemerhatian (Pro-tip) */}

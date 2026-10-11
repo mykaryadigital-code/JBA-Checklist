@@ -49,7 +49,7 @@ export const Header: React.FC = () => {
   return (
     <>
       <header className="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-[#fcc2d7] shadow-xs">
-        <div className="max-w-xl mx-auto px-4 py-2.5">
+        <div className="w-full max-w-3xl mx-auto px-4 py-2.5">
           {/* Top Row: App Title & Action Icons */}
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">

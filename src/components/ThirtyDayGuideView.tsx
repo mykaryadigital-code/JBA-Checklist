@@ -433,7 +433,7 @@ export const ThirtyDayGuideView: React.FC = () => {
                         )}
                       </button>
                     </div>
-                    <blockquote className="font-bold text-slate-900 bg-white p-2.5 rounded-lg border border-[#fcc2d7] leading-relaxed text-[12.5px]">
+                    <blockquote className="font-bold text-slate-900 bg-white p-2.5 rounded-lg border border-[#fcc2d7] leading-relaxed text-[12px] sm:text-[12.5px]">
                       <strong className="font-black text-[#d70f64] mr-1.5">
                         Soalan Hari {guide.day}:
                       </strong>
@@ -441,26 +441,33 @@ export const ThirtyDayGuideView: React.FC = () => {
                     </blockquote>
                   </div>
 
-                  {/* ⚠️ Amaran Red Flag */}
-                  <div className="p-3 rounded-xl bg-red-50/80 border border-red-200 text-red-950">
-                    <div className="flex items-center gap-1.5 font-bold text-red-800 mb-1">
-                      <AlertTriangle className="w-3.5 h-3.5 text-red-600 shrink-0" />
-                      <span>Amaran Red Flag (Tanda Bahaya)</span>
+                  {/* 2-Column Grid: Amaran Red Flag & Kata Hikmah */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    {/* ⚠️ Amaran Red Flag */}
+                    <div className="p-3 rounded-xl bg-red-50/80 border border-red-200 text-red-950 flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-center gap-1.5 font-bold text-red-800 mb-1">
+                          <AlertTriangle className="w-3.5 h-3.5 text-red-600 shrink-0" />
+                          <span>Amaran Red Flag (Tanda Bahaya)</span>
+                        </div>
+                        <p className="text-red-900 leading-relaxed text-[11.5px] sm:text-xs">
+                          {guide.redFlagWarning}
+                        </p>
+                      </div>
                     </div>
-                    <p className="text-red-900 leading-relaxed">
-                      {guide.redFlagWarning}
-                    </p>
-                  </div>
 
-                  {/* 💬 Kata Hikmah */}
-                  <div className="p-3 rounded-xl bg-amber-50/70 border border-amber-200 text-amber-950">
-                    <div className="flex items-center gap-1.5 font-bold text-amber-900 mb-1">
-                      <Quote className="w-3.5 h-3.5 text-amber-700 shrink-0" />
-                      <span>Kata Hikmah & Pesanan</span>
+                    {/* 💬 Kata Hikmah */}
+                    <div className="p-3 rounded-xl bg-amber-50/70 border border-amber-200 text-amber-950 flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-center gap-1.5 font-bold text-amber-900 mb-1">
+                          <Quote className="w-3.5 h-3.5 text-amber-700 shrink-0" />
+                          <span>Kata Hikmah & Pesanan</span>
+                        </div>
+                        <p className="italic text-[11.5px] sm:text-xs text-amber-900 leading-relaxed">
+                          "{guide.wiseQuote}"
+                        </p>
+                      </div>
                     </div>
-                    <p className="italic text-[12px] text-amber-900 leading-relaxed">
-                      "{guide.wiseQuote}"
-                    </p>
                   </div>
 
                   {/* 🎯 Pilihan Penilaian Hari Ini (Green Flag, Red Flag, Belum Dinilai) */}
