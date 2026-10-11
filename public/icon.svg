@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2b85" />
+      <stop offset="100%" stop-color="#d70f64" />
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#fff0f5" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#7a0434" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded rect with Foodpanda pink gradient -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Subtle glow inner plate -->
+  <rect x="24" y="24" width="464" height="464" rx="96" fill="none" stroke="#ffffff" stroke-width="4" stroke-opacity="0.25" />
+
+  <!-- Central Card / Board -->
+  <rect x="96" y="80" width="320" height="360" rx="36" fill="url(#shieldGrad)" filter="url(#shadow)" />
+
+  <!-- Card Top Clip / Tab -->
+  <rect x="186" y="58" width="140" height="48" rx="16" fill="#9f0747" />
+  <rect x="194" y="66" width="124" height="32" rx="10" fill="#ffffff" fill-opacity="0.9" />
+
+  <!-- Checklist Lines & Checkmarks -->
+  <!-- Row 1: Green Flag Check -->
+  <circle cx="152" cy="165" r="22" fill="#10b981" />
+  <path d="M142 165 L149 172 L163 158" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="192" y="153" width="180" height="18" rx="9" fill="#334155" />
+  <rect x="192" y="177" width="120" height="10" rx="5" fill="#94a3b8" />
+
+  <!-- Row 2: Heart / Marriage Assessment -->
+  <circle cx="152" cy="245" r="22" fill="#d70f64" />
+  <path d="M152 254 C152 254 139 246 139 238 C139 234 142 231 146 231 C149 231 151 233 152 235 C153 233 155 231 158 231 C162 231 165 234 165 238 C165 246 152 254 152 254 Z" fill="#ffffff" />
+  <rect x="192" y="233" width="190" height="18" rx="9" fill="#334155" />
+  <rect x="192" y="257" width="140" height="10" rx="5" fill="#94a3b8" />
+
+  <!-- Row 3: Istikharah & Shield -->
+  <circle cx="152" cy="325" r="22" fill="#0284c7" />
+  <path d="M152 312 L162 316 C162 328 152 338 152 338 C152 338 142 328 142 316 Z" fill="#ffffff" />
+  <rect x="192" y="313" width="170" height="18" rx="9" fill="#334155" />
+  <rect x="192" y="337" width="110" height="10" rx="5" fill="#94a3b8" />
+
+  <!-- Bottom Badge: 30 Hari Panduan -->
+  <rect x="136" y="380" width="240" height="34" rx="17" fill="#ffe4ee" />
+  <circle cx="155" cy="397" r="8" fill="#d70f64" />
+  <rect x="172" y="392" width="180" height="10" rx="5" fill="#d70f64" fill-opacity="0.8" />
+</svg>

@@ -143,8 +143,8 @@ export const TaarufQuestionsView: React.FC = () => {
                         {item.categoryLabel}
                       </span>
                     </div>
-                    <h3 className="font-serif font-bold text-slate-900 text-sm sm:text-base leading-snug">
-                      <span className="text-[#d70f64] font-sans font-black mr-1.5 not-italic">
+                    <h3 className="font-bold text-slate-900 text-sm sm:text-base leading-snug">
+                      <span className="text-[#d70f64] font-black mr-1.5">
                         Soalan {item.questionNumber}:
                       </span>
                       "{item.question}"

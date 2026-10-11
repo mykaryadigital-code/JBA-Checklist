@@ -433,8 +433,8 @@ export const ThirtyDayGuideView: React.FC = () => {
                         )}
                       </button>
                     </div>
-                    <blockquote className="italic text-slate-800 bg-white p-2.5 rounded-lg border border-[#fcc2d7] leading-relaxed font-serif text-[12px]">
-                      <strong className="font-sans font-black text-[#d70f64] not-italic mr-1.5">
+                    <blockquote className="font-bold text-slate-900 bg-white p-2.5 rounded-lg border border-[#fcc2d7] leading-relaxed text-[12.5px]">
+                      <strong className="font-black text-[#d70f64] mr-1.5">
                         Soalan Hari {guide.day}:
                       </strong>
                       "{guide.taarufQuestion}"
@@ -458,7 +458,7 @@ export const ThirtyDayGuideView: React.FC = () => {
                       <Quote className="w-3.5 h-3.5 text-amber-700 shrink-0" />
                       <span>Kata Hikmah & Pesanan</span>
                     </div>
-                    <p className="italic font-serif text-[12px] text-amber-900 leading-relaxed">
+                    <p className="italic text-[12px] text-amber-900 leading-relaxed">
                       "{guide.wiseQuote}"
                     </p>
                   </div>

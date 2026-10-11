@@ -13,6 +13,7 @@ import { useApp } from '../context/AppContext';
 import { CandidateModal } from './CandidateModal';
 import { ExportImportModal } from './ExportImportModal';
 import { GuideModal } from './GuideModal';
+import { PWAInstallButton } from './PWAInstallButton';
 
 export const Header: React.FC = () => {
   const { 
@@ -66,6 +67,7 @@ export const Header: React.FC = () => {
             </div>
 
             <div className="flex items-center gap-1.5">
+              <PWAInstallButton />
               <button
                 onClick={() => setIsGuideModalOpen(true)}
                 title="Panduan Aplikasi"
