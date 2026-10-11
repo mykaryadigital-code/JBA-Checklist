@@ -213,7 +213,7 @@ export const THIRTY_DAY_GUIDE_DATA: DayGuide[] = [
     title: 'Muhasabah Minggu 3: Integriti Kewangan',
     actionItem: 'Periksa sama ada dia pernah meminta pinjaman wang daripada anda atau mendesak anda membuat komitmen pinjaman atas nama anda.',
     taarufQuestion: 'Adakah terdapat sebarang perkara kewangan yang masih meragukan atau perlu diperjelaskan sebelum melangkah ke peringkat wali?',
-    redFlagWarning: 'PERINGATAN KRITIKAL: Jika calon pernah meminta anda meminjamkan wang, membuat pinjaman bank atau kad kredit atas nama anda—BERUNDUR SERTA MERTA!',
+    redFlagWarning: 'PERINGATAN ASAS WAJIB: Jika calon pernah meminta anda meminjamkan wang, membuat pinjaman bank atau kad kredit atas nama anda—BERUNDUR SERTA MERTA!',
     wiseQuote: 'Lelaki sejati membina perlindungan untuk wanita, bukan menjadikannya sandaran kewangan peribadi.',
   },
 

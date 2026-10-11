@@ -73,43 +73,43 @@ export const JournalView: React.FC = () => {
   return (
     <div className="space-y-4">
       {/* 1. Header Banner & Consistency Score */}
-      <div className="bg-gradient-to-br from-rose-900 to-rose-950 text-white p-4.5 rounded-2xl shadow-md shadow-rose-950/15">
+      <div className="bg-gradient-to-br from-pink-500 via-rose-400 to-pink-500 text-white p-4.5 rounded-2xl shadow-md shadow-pink-500/20">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-rose-800/80 border border-rose-700/50 text-[11px] font-semibold text-rose-200">
-            <Activity className="w-3 h-3 text-rose-300" />
+          <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/20 border border-white/30 text-[11px] font-semibold text-white">
+            <Activity className="w-3 h-3 text-pink-100" />
             <span>Jurnal Tindakan Sebenar</span>
           </div>
-          <span className="text-xs font-bold text-rose-200">
+          <span className="text-xs font-bold text-pink-100">
             {stats.journalCount} Insiden Direkod
           </span>
         </div>
 
         <h2 className="text-lg font-bold mt-2">Kata-Kata vs Tindakan</h2>
-        <p className="text-xs text-rose-200/90 mt-0.5 leading-relaxed">
+        <p className="text-xs text-pink-100 mt-0.5 leading-relaxed">
           Bukti nyata adalah perbuatan, bukan janji manis di bibir semata-mata.
         </p>
 
         {/* Stats Row */}
-        <div className="grid grid-cols-2 gap-2 mt-3.5 pt-3 border-t border-rose-800/60">
-          <div className="bg-rose-800/40 p-2.5 rounded-xl border border-rose-700/40 flex items-center justify-between">
+        <div className="grid grid-cols-2 gap-2 mt-3.5 pt-3 border-t border-white/20">
+          <div className="bg-white/15 p-2.5 rounded-xl border border-white/20 flex items-center justify-between">
             <div>
-              <div className="text-[10px] text-rose-200">Kadar Konsistensi</div>
-              <div className="text-lg font-black text-emerald-300">
+              <div className="text-[10px] text-pink-100">Kadar Konsistensi</div>
+              <div className="text-lg font-black text-emerald-200">
                 {stats.consistencyRate}%
               </div>
             </div>
-            <CheckCircle2 className="w-6 h-6 text-emerald-400 opacity-80" />
+            <CheckCircle2 className="w-6 h-6 text-emerald-300 opacity-90" />
           </div>
 
-          <div className="bg-rose-800/40 p-2.5 rounded-xl border border-rose-700/40 flex items-center justify-between">
+          <div className="bg-white/15 p-2.5 rounded-xl border border-white/20 flex items-center justify-between">
             <div>
-              <div className="text-[10px] text-rose-200">Sejajar / Tidak</div>
+              <div className="text-[10px] text-pink-100">Sejajar / Tidak</div>
               <div className="text-sm font-bold text-white">
-                <span className="text-emerald-300">{stats.consistentJournalCount}</span> /{' '}
-                <span className="text-rose-300">{stats.journalCount - stats.consistentJournalCount}</span>
+                <span className="text-emerald-200">{stats.consistentJournalCount}</span> /{' '}
+                <span className="text-rose-100">{stats.journalCount - stats.consistentJournalCount}</span>
               </div>
             </div>
-            <BookOpen className="w-6 h-6 text-rose-300 opacity-80" />
+            <BookOpen className="w-6 h-6 text-pink-100 opacity-80" />
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@ export const JournalView: React.FC = () => {
       <div className="flex items-center justify-between gap-2">
         <button
           onClick={handleOpenModal}
-          className="flex-1 py-2.5 px-4 bg-rose-800 hover:bg-rose-900 text-white rounded-xl text-xs sm:text-sm font-semibold flex items-center justify-center gap-1.5 shadow-xs transition-colors"
+          className="flex-1 py-2.5 px-4 bg-pink-500 hover:bg-pink-600 text-white rounded-xl text-xs sm:text-sm font-semibold flex items-center justify-center gap-1.5 shadow-md shadow-pink-500/20 transition-colors"
         >
           <Plus className="w-4 h-4" />
           <span>Catat Insiden Baharu</span>
@@ -131,7 +131,7 @@ export const JournalView: React.FC = () => {
           onClick={() => setStatusFilter('all')}
           className={`px-3 py-1.5 rounded-full font-medium whitespace-nowrap transition-colors ${
             statusFilter === 'all'
-              ? 'bg-rose-850 text-white font-bold'
+              ? 'bg-pink-500 text-white font-bold'
               : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
           }`}
         >

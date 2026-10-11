@@ -45,7 +45,7 @@ export const BottomNav: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-rose-100 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-pink-100 shadow-[0_-4px_20px_rgba(244,114,182,0.06)]">
       <div className="max-w-xl mx-auto px-2">
         <div className="grid grid-cols-5 items-center">
           {navItems.map(item => {
@@ -58,13 +58,13 @@ export const BottomNav: React.FC = () => {
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
                 className={`flex flex-col items-center justify-center py-2.5 px-1 relative transition-colors group min-h-[60px] ${
-                  isActive ? 'text-rose-800 font-bold' : 'text-slate-500 hover:text-rose-700 font-medium'
+                  isActive ? 'text-pink-600 font-bold' : 'text-slate-400 hover:text-pink-500 font-medium'
                 }`}
               >
                 <div className="relative">
                   <div
                     className={`p-1 rounded-xl transition-all ${
-                      isActive ? 'bg-rose-100 text-rose-850 scale-105' : 'group-hover:bg-slate-100'
+                      isActive ? 'bg-pink-100/80 text-pink-600 scale-105' : 'group-hover:bg-pink-50/50'
                     }`}
                   >
                     {item.icon}
@@ -73,7 +73,7 @@ export const BottomNav: React.FC = () => {
                     <span
                       className={`absolute -top-1 -right-2 text-[9px] font-bold px-1.5 py-0.2 rounded-full leading-tight shrink-0 shadow-xs ${
                         isActive
-                          ? 'bg-rose-800 text-white'
+                          ? 'bg-pink-500 text-white'
                           : 'bg-slate-200 text-slate-700'
                       }`}
                     >
@@ -85,7 +85,7 @@ export const BottomNav: React.FC = () => {
                   {item.label}
                 </span>
                 {isActive && (
-                  <div className="absolute bottom-0 w-8 h-0.5 bg-rose-800 rounded-t-full" />
+                  <div className="absolute bottom-0 w-8 h-0.5 bg-pink-500 rounded-t-full" />
                 )}
               </button>
             );

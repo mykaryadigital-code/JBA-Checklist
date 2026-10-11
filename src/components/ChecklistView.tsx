@@ -58,43 +58,43 @@ export const ChecklistView: React.FC = () => {
   return (
     <div className="space-y-4">
       {/* Top Banner & Stats Summary */}
-      <div className="bg-gradient-to-br from-rose-900 to-rose-950 text-white p-4.5 rounded-2xl shadow-md shadow-rose-950/15">
+      <div className="bg-gradient-to-br from-pink-500 via-rose-400 to-pink-500 text-white p-4.5 rounded-2xl shadow-md shadow-pink-500/20">
         <div className="flex items-start justify-between">
           <div>
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-rose-800/80 border border-rose-700/50 text-[11px] font-semibold text-rose-200 mb-1.5">
-              <Sparkles className="w-3 h-3 text-rose-300" />
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/20 border border-white/30 text-[11px] font-semibold text-white mb-1.5">
+              <Sparkles className="w-3 h-3 text-pink-100" />
               <span>Senarai Semak 25 Kriteria</span>
             </div>
             <h2 className="text-lg font-bold">Penilaian Bukti Tindakan</h2>
-            <p className="text-xs text-rose-200/90 mt-0.5 leading-relaxed">
+            <p className="text-xs text-pink-100 mt-0.5 leading-relaxed">
               Nilai calon berdasarkan perbuatan harian & kepatuhan syarak.
             </p>
           </div>
           <div className="text-right">
-            <span className="text-2xl font-black text-rose-100">{stats.ratedCount}</span>
-            <span className="text-xs text-rose-300">/25 Dinilai</span>
+            <span className="text-2xl font-black text-white">{stats.ratedCount}</span>
+            <span className="text-xs text-pink-100">/25 Dinilai</span>
           </div>
         </div>
 
         {/* Flag count pill chips */}
-        <div className="grid grid-cols-3 gap-2 mt-4 pt-3 border-t border-rose-800/60">
-          <div className="bg-rose-800/40 rounded-xl p-2 text-center border border-rose-700/40">
-            <div className="text-emerald-300 font-bold text-base leading-none">
+        <div className="grid grid-cols-3 gap-2 mt-4 pt-3 border-t border-white/20">
+          <div className="bg-white/15 rounded-xl p-2 text-center border border-white/20">
+            <div className="text-emerald-200 font-bold text-base leading-none">
               +{stats.greenCount}
             </div>
-            <div className="text-[10px] text-rose-200 mt-1 font-medium">Green Flag</div>
+            <div className="text-[10px] text-pink-100 mt-1 font-medium">Green Flag</div>
           </div>
-          <div className="bg-rose-800/40 rounded-xl p-2 text-center border border-rose-700/40">
-            <div className="text-rose-300 font-bold text-base leading-none">
+          <div className="bg-white/15 rounded-xl p-2 text-center border border-white/20">
+            <div className="text-rose-100 font-bold text-base leading-none">
               -{stats.redCount}
             </div>
-            <div className="text-[10px] text-rose-200 mt-1 font-medium">Red Flag</div>
+            <div className="text-[10px] text-pink-100 mt-1 font-medium">Red Flag</div>
           </div>
-          <div className="bg-rose-800/40 rounded-xl p-2 text-center border border-rose-700/40">
-            <div className="text-slate-300 font-bold text-base leading-none">
+          <div className="bg-white/15 rounded-xl p-2 text-center border border-white/20">
+            <div className="text-white font-bold text-base leading-none">
               {stats.unratedCount}
             </div>
-            <div className="text-[10px] text-rose-200 mt-1 font-medium">Belum Nilai</div>
+            <div className="text-[10px] text-pink-100 mt-1 font-medium">Belum Nilai</div>
           </div>
         </div>
       </div>
@@ -107,7 +107,7 @@ export const ChecklistView: React.FC = () => {
           placeholder="Cari kriteria, kata kunci, atau nota..."
           value={searchQuery}
           onChange={e => setSearchQuery(e.target.value)}
-          className="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-rose-700"
+          className="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-pink-400"
         />
         {searchQuery && (
           <button
@@ -125,7 +125,7 @@ export const ChecklistView: React.FC = () => {
           onClick={() => setFilter('all')}
           className={`px-3 py-1.5 rounded-full whitespace-nowrap font-medium transition-colors ${
             filter === 'all'
-              ? 'bg-rose-850 text-white font-bold shadow-xs'
+              ? 'bg-pink-500 text-white font-bold shadow-xs'
               : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
           }`}
         >
@@ -135,7 +135,7 @@ export const ChecklistView: React.FC = () => {
           onClick={() => setFilter('sahsiah')}
           className={`px-3 py-1.5 rounded-full whitespace-nowrap font-medium transition-colors ${
             filter === 'sahsiah'
-              ? 'bg-rose-850 text-white font-bold shadow-xs'
+              ? 'bg-pink-500 text-white font-bold shadow-xs'
               : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
           }`}
         >
@@ -145,7 +145,7 @@ export const ChecklistView: React.FC = () => {
           onClick={() => setFilter('kewangan')}
           className={`px-3 py-1.5 rounded-full whitespace-nowrap font-medium transition-colors ${
             filter === 'kewangan'
-              ? 'bg-rose-850 text-white font-bold shadow-xs'
+              ? 'bg-pink-500 text-white font-bold shadow-xs'
               : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
           }`}
         >
@@ -155,7 +155,7 @@ export const ChecklistView: React.FC = () => {
           onClick={() => setFilter('keluarga')}
           className={`px-3 py-1.5 rounded-full whitespace-nowrap font-medium transition-colors ${
             filter === 'keluarga'
-              ? 'bg-rose-850 text-white font-bold shadow-xs'
+              ? 'bg-pink-500 text-white font-bold shadow-xs'
               : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
           }`}
         >
@@ -165,7 +165,7 @@ export const ChecklistView: React.FC = () => {
           onClick={() => setFilter('komunikasi')}
           className={`px-3 py-1.5 rounded-full whitespace-nowrap font-medium transition-colors ${
             filter === 'komunikasi'
-              ? 'bg-rose-850 text-white font-bold shadow-xs'
+              ? 'bg-pink-500 text-white font-bold shadow-xs'
               : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
           }`}
         >
@@ -242,7 +242,7 @@ export const ChecklistView: React.FC = () => {
                     {item.isCritical && (
                       <span className="inline-flex items-center gap-1 text-[10px] font-bold text-rose-700 bg-rose-50 border border-rose-200 px-2 py-0.5 rounded-full">
                         <ShieldAlert className="w-3 h-3 text-rose-600" />
-                        Kritikal
+                        Asas Wajib
                       </span>
                     )}
                   </div>
@@ -312,7 +312,7 @@ export const ChecklistView: React.FC = () => {
                   <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between">
                     <button
                       onClick={() => toggleNotes(item.id)}
-                      className="text-xs text-rose-800 hover:text-rose-950 font-semibold flex items-center gap-1.5 transition-colors"
+                      className="text-xs text-pink-700 hover:text-pink-900 font-semibold flex items-center gap-1.5 transition-colors"
                     >
                       <MessageSquare className="w-3.5 h-3.5" />
                       <span>
@@ -335,8 +335,8 @@ export const ChecklistView: React.FC = () => {
 
                 {/* Collapsible Notes Field */}
                 {isNotesExpanded && (
-                  <div className="bg-rose-50/50 p-3.5 border-t border-rose-100 animate-in fade-in duration-150">
-                    <label className="block text-[11px] font-semibold text-rose-900 mb-1">
+                  <div className="bg-pink-50/50 p-3.5 border-t border-pink-100 animate-in fade-in duration-150">
+                    <label className="block text-[11px] font-semibold text-pink-900 mb-1">
                       Catatan Bukti / Situasi Sebenar:
                     </label>
                     <textarea
@@ -344,7 +344,7 @@ export const ChecklistView: React.FC = () => {
                       placeholder="Tulis tarikh, peristiwa, kata-katanya atau tindakan konkrit yang anda saksikan sendiri..."
                       value={userRecord.notes || ''}
                       onChange={e => updateCriterionNotes(item.id, e.target.value)}
-                      className="w-full px-3 py-2 text-xs bg-white border border-rose-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-rose-700 resize-none"
+                      className="w-full px-3 py-2 text-xs bg-white border border-pink-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400 resize-none"
                     />
                   </div>
                 )}

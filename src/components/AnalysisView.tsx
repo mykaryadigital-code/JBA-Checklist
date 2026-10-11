@@ -31,14 +31,14 @@ export const AnalysisView: React.FC = () => {
     verdictType = 'berpotensi';
     verdictTitle = 'Sangat Berpotensi (Teruskan ke Fasa Wali & Akad)';
     verdictDescription =
-      'Calon menunjukkan tahap kematangan, kebertanggungjawaban syarie, dan rekod perlakuan yang meyakinkan tanpa red flag kritikal. Disarankan meneruskan ke fasa pertemuan rasmi bersama wali dan solat istikharah.';
+      'Calon menunjukkan tahap kematangan, kebertanggungjawaban syarie, dan rekod perlakuan yang meyakinkan tanpa sebarang red flag pada kriteria asas wajib. Disarankan meneruskan ke fasa pertemuan rasmi bersama wali dan solat istikharah.';
     verdictBadgeBg = 'bg-emerald-600 text-white';
     verdictCardBg = 'bg-emerald-50/70 border-emerald-300';
   } else if (stats.scorePercentage < 50 || stats.criticalRedFlags >= 2) {
     verdictType = 'bahaya';
     verdictTitle = 'Amaran Bahaya: Disarankan Berundur Demi Keselamatan Emosi & Anak';
     verdictDescription =
-      'Terdapat isu kritikal seperti panas baran, pengabaian nafkah, ketidakjujuran status, atau manipulasi yang dikesan. Mengahwini calon ini berisiko tinggi mengorbankan kesejahteraan emosi anda dan anak.';
+      'Terdapat isu pada kriteria asas wajib seperti panas baran, pengabaian nafkah, ketidakjujuran status, atau manipulasi yang dikesan. Mengahwini calon ini berisiko tinggi mengorbankan kesejahteraan emosi anda dan anak.';
     verdictBadgeBg = 'bg-rose-700 text-white';
     verdictCardBg = 'bg-rose-50/80 border-rose-300';
   }
@@ -53,13 +53,13 @@ export const AnalysisView: React.FC = () => {
   return (
     <div className="space-y-4">
       {/* 1. Main Score Meter Card */}
-      <div className="bg-gradient-to-br from-rose-900 to-rose-950 text-white p-5 rounded-2xl shadow-md shadow-rose-950/15">
+      <div className="bg-gradient-to-br from-pink-500 via-rose-400 to-pink-500 text-white p-5 rounded-2xl shadow-md shadow-pink-500/20">
         <div className="text-center">
-          <span className="text-[11px] uppercase tracking-wider font-bold text-rose-300 block mb-1">
+          <span className="text-[11px] uppercase tracking-wider font-bold text-pink-100 block mb-1">
             Indeks Skor Kelayakan Calon
           </span>
           <h2 className="text-xl font-bold">{activeCandidate.name}</h2>
-          <p className="text-xs text-rose-200 mt-0.5">
+          <p className="text-xs text-pink-100 mt-0.5">
             Berasaskan nisbah 25 kriteria tindakan harian & syariat
           </p>
         </div>
@@ -73,7 +73,7 @@ export const AnalysisView: React.FC = () => {
                 cx="50"
                 cy="50"
                 r="42"
-                stroke="rgba(255,255,255,0.15)"
+                stroke="rgba(255,255,255,0.2)"
                 strokeWidth="10"
                 fill="none"
               />
@@ -85,7 +85,7 @@ export const AnalysisView: React.FC = () => {
                   verdictType === 'berpotensi'
                     ? '#34d399'
                     : verdictType === 'bahaya'
-                    ? '#f43f5e'
+                    ? '#fb7185'
                     : '#fbbf24'
                 }
                 strokeWidth="10"
@@ -102,7 +102,7 @@ export const AnalysisView: React.FC = () => {
               <span className="text-3xl font-black tracking-tight text-white leading-none">
                 {stats.scorePercentage}%
               </span>
-              <span className="text-[10px] text-rose-200 font-medium mt-1">
+              <span className="text-[10px] text-pink-100 font-medium mt-1">
                 Skor Kelayakan
               </span>
             </div>
@@ -110,24 +110,24 @@ export const AnalysisView: React.FC = () => {
         </div>
 
         {/* 3 Metric Pills */}
-        <div className="grid grid-cols-3 gap-2 pt-3 border-t border-rose-800/60 text-center">
-          <div className="bg-rose-800/40 p-2 rounded-xl border border-rose-700/40">
-            <div className="text-emerald-300 font-bold text-lg leading-tight">
+        <div className="grid grid-cols-3 gap-2 pt-3 border-t border-white/20 text-center">
+          <div className="bg-white/15 p-2 rounded-xl border border-white/20">
+            <div className="text-emerald-200 font-bold text-lg leading-tight">
               {stats.greenCount}
             </div>
-            <div className="text-[10px] text-rose-200">Green Flag (+1)</div>
+            <div className="text-[10px] text-pink-100">Green Flag (+1)</div>
           </div>
-          <div className="bg-rose-800/40 p-2 rounded-xl border border-rose-700/40">
-            <div className="text-rose-300 font-bold text-lg leading-tight">
+          <div className="bg-white/15 p-2 rounded-xl border border-white/20">
+            <div className="text-rose-100 font-bold text-lg leading-tight">
               {stats.redCount}
             </div>
-            <div className="text-[10px] text-rose-200">Red Flag (-1)</div>
+            <div className="text-[10px] text-pink-100">Red Flag (-1)</div>
           </div>
-          <div className="bg-rose-800/40 p-2 rounded-xl border border-rose-700/40">
-            <div className="text-slate-300 font-bold text-lg leading-tight">
+          <div className="bg-white/15 p-2 rounded-xl border border-white/20">
+            <div className="text-white font-bold text-lg leading-tight">
               {stats.unratedCount}
             </div>
-            <div className="text-[10px] text-rose-200">Belum Nilai</div>
+            <div className="text-[10px] text-pink-100">Belum Nilai</div>
           </div>
         </div>
       </div>
@@ -173,7 +173,7 @@ export const AnalysisView: React.FC = () => {
             </div>
             {stats.criticalRedFlags > 0 && (
               <span className="px-2 py-0.5 bg-rose-100 text-rose-800 rounded-full text-[10px] font-bold">
-                {stats.criticalRedFlags} Isu Kritikal!
+                {stats.criticalRedFlags} Isu Asas Wajib!
               </span>
             )}
           </div>
@@ -196,7 +196,7 @@ export const AnalysisView: React.FC = () => {
                     </span>
                     {item.isCritical && (
                       <span className="text-[10px] bg-rose-600 text-white px-1.5 py-0.2 rounded font-bold">
-                        KRITIKAL
+                        ASAS WAJIB
                       </span>
                     )}
                   </div>

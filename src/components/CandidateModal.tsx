@@ -73,12 +73,12 @@ export const CandidateModal: React.FC<CandidateModalProps> = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
       <div className="bg-white rounded-2xl w-full max-w-md shadow-2xl overflow-hidden border border-rose-100 flex flex-col max-h-[90vh]">
         {/* Modal Header */}
-        <div className="bg-rose-900 text-white px-5 py-4 flex items-center justify-between">
+        <div className="bg-gradient-to-r from-pink-500 to-rose-400 text-white px-5 py-4 flex items-center justify-between shadow-xs">
           <div className="flex items-center gap-2.5">
             {candidateToEdit ? (
-              <Edit3 className="w-5 h-5 text-rose-300" />
+              <Edit3 className="w-5 h-5 text-pink-100" />
             ) : (
-              <UserPlus className="w-5 h-5 text-rose-300" />
+              <UserPlus className="w-5 h-5 text-pink-100" />
             )}
             <h3 className="font-semibold text-lg">
               {candidateToEdit ? 'Kemaskini Maklumat Calon' : 'Daftar Calon Baharu'}
@@ -86,7 +86,7 @@ export const CandidateModal: React.FC<CandidateModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="text-rose-200 hover:text-white p-1 rounded-lg hover:bg-rose-800/50 transition-colors"
+            className="text-pink-100 hover:text-white p-1 rounded-lg hover:bg-white/20 transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -207,7 +207,7 @@ export const CandidateModal: React.FC<CandidateModalProps> = ({
               </button>
               <button
                 type="submit"
-                className="px-5 py-2.5 bg-rose-700 hover:bg-rose-800 text-white rounded-xl text-sm font-semibold shadow-md shadow-rose-900/10 transition-colors"
+                className="px-5 py-2.5 bg-pink-500 hover:bg-pink-600 text-white rounded-xl text-sm font-semibold shadow-md shadow-pink-500/20 transition-colors"
               >
                 {candidateToEdit ? 'Simpan Perubahan' : 'Tambah Calon'}
               </button>

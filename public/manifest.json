@@ -1,7 +1,7 @@
 {
   "short_name": "Checklist Suami",
-  "name": "Checklist & Panduan Bakal Suami",
-  "description": "Panduan & Penilaian Calon Pasangan Hidup Berpandukan Tindakan & Syarak untuk Wanita Matang & Ibu Tunggal",
+  "name": "Checklist Bakal Suami",
+  "description": "Kenali Tindakan, Bukan Kata-Kata - Panduan menilai calon pasangan hidup berpandukan bukti tindakan harian untuk wanita matang & ibu tunggal",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#be123c",
