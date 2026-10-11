@@ -45,7 +45,13 @@ export const INITIAL_SAMPLE_CANDIDATE: Candidate = {
     4: { completed: true, rating: 'green', notes: 'Terbukti menjaga solat lima waktu walaupun ketika dalam urusan mesyuarat luar.', completedAt: '2026-10-05' },
     5: { completed: true, rating: 'green', notes: 'Dia menerima anak saya dengan hati terbuka dan faham komitmen seorang ibu.', completedAt: '2026-10-06' },
     6: { completed: true, rating: 'green', notes: 'Tiada sebarang tabiat merokok atau vape. Gaya hidup sihat berbasikal.', completedAt: '2026-10-07' },
-    7: { completed: true, rating: 'green', notes: 'Rumusan Minggu 1: Sangat konsisten dan tenang.', completedAt: '2026-10-08' },
+  },
+  questionRatings: {
+    q1: { rating: 'green', notes: 'Menyatakan visi sakinah dan matlamat pasukan ibadah bersama ke syurga.', updatedAt: '2026-10-02' },
+    q2: { rating: 'green', notes: 'Menjaga solat di masjid dan bersedia menjadi imam keluarga.', updatedAt: '2026-10-03' },
+    q3: { rating: 'green', notes: 'Sangat menghormati batas ikhtilat dan privasi malam.', updatedAt: '2026-10-04' },
+    q5: { rating: 'green', notes: 'Telus tentang perbelanjaan, simpanan, dan komitmen nafkah.', updatedAt: '2026-10-05' },
+    q10: { rating: 'green', notes: 'Matang mengawal emosi ketika tertekan tanpa meninggikan suara.', updatedAt: '2026-10-06' },
   },
   journal: [
     {

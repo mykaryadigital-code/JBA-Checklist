@@ -63,6 +63,12 @@ export interface TaarufQuestionItem {
   proTip: string;
 }
 
+export interface QuestionUserRecord {
+  rating: CriterionRating; // 'unrated' | 'green' | 'red'
+  notes?: string;
+  updatedAt?: string;
+}
+
 export interface Candidate {
   id: string;
   name: string;
@@ -74,6 +80,7 @@ export interface Candidate {
   createdAt: string;
   checklist: Record<number, CriterionUserRecord>;
   dayProgress: Record<number, DayUserRecord>;
+  questionRatings?: Record<string, QuestionUserRecord>;
   journal: JournalEntry[];
 }
 

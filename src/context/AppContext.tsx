@@ -7,6 +7,7 @@ import {
 } from '../types';
 import { loadAppState, saveAppState, INITIAL_SAMPLE_CANDIDATE } from '../utils/storage';
 import { CRITERIA_DATA } from '../data/criteriaData';
+import { TAARUF_QUESTIONS_DATA } from '../data/taarufQuestionsData';
 
 interface AppContextType {
   activeTab: ActiveTab;
@@ -23,6 +24,8 @@ interface AppContextType {
   toggleDayCompletion: (day: number, notes?: string) => void;
   rateDay: (day: number, rating: CriterionRating, notes?: string) => void;
   updateDayNotes: (day: number, notes: string) => void;
+  rateQuestion: (questionId: string, rating: CriterionRating, notes?: string) => void;
+  updateQuestionNotes: (questionId: string, notes: string) => void;
   addJournalEntry: (entry: Omit<JournalEntry, 'id' | 'candidateId' | 'createdAt'>) => void;
   deleteJournalEntry: (id: string) => void;
   exportDataJson: () => string;
@@ -42,6 +45,11 @@ interface AppContextType {
     dayGreenCount: number;
     dayRedCount: number;
     dayUnratedCount: number;
+    questionTotalCount: number;
+    questionRatedCount: number;
+    questionGreenCount: number;
+    questionRedCount: number;
+    questionUnratedCount: number;
     journalCount: number;
     consistentJournalCount: number;
     consistencyRate: number;
@@ -233,6 +241,55 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     });
   };
 
+  const rateQuestion = (questionId: string, rating: CriterionRating, notes?: string) => {
+    setState(prev => {
+      return {
+        ...prev,
+        candidates: prev.candidates.map(c => {
+          if (c.id !== prev.activeCandidateId) return c;
+          const currentRatings = c.questionRatings || {};
+          const currentRec = currentRatings[questionId] || { rating: 'unrated', notes: '' };
+          return {
+            ...c,
+            questionRatings: {
+              ...currentRatings,
+              [questionId]: {
+                ...currentRec,
+                rating,
+                notes: notes !== undefined ? notes : currentRec.notes,
+                updatedAt: new Date().toISOString().split('T')[0],
+              },
+            },
+          };
+        }),
+      };
+    });
+  };
+
+  const updateQuestionNotes = (questionId: string, notes: string) => {
+    setState(prev => {
+      return {
+        ...prev,
+        candidates: prev.candidates.map(c => {
+          if (c.id !== prev.activeCandidateId) return c;
+          const currentRatings = c.questionRatings || {};
+          const currentRec = currentRatings[questionId] || { rating: 'unrated', notes: '' };
+          return {
+            ...c,
+            questionRatings: {
+              ...currentRatings,
+              [questionId]: {
+                ...currentRec,
+                notes,
+                updatedAt: new Date().toISOString().split('T')[0],
+              },
+            },
+          };
+        }),
+      };
+    });
+  };
+
   const addJournalEntry = (entry: Omit<JournalEntry, 'id' | 'candidateId' | 'createdAt'>) => {
     const newEntry: JournalEntry = {
       ...entry,
@@ -372,6 +429,23 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     const consistentJournalCount = journals.filter(j => j.status === 'konsisten').length;
     const consistencyRate = journalCount > 0 ? Math.round((consistentJournalCount / journalCount) * 100) : 100;
 
+    // Question stats (32 Soalan Ta'aruf)
+    const questionRatings = activeCandidate?.questionRatings || {};
+    let questionGreenCount = 0;
+    let questionRedCount = 0;
+    let questionRatedCount = 0;
+    Object.values(questionRatings).forEach(rec => {
+      if (rec.rating === 'green') {
+        questionGreenCount++;
+        questionRatedCount++;
+      } else if (rec.rating === 'red') {
+        questionRedCount++;
+        questionRatedCount++;
+      }
+    });
+    const questionTotalCount = TAARUF_QUESTIONS_DATA.length;
+    const questionUnratedCount = Math.max(0, questionTotalCount - questionRatedCount);
+
     return {
       totalCriteria,
       ratedCount,
@@ -385,6 +459,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       dayGreenCount,
       dayRedCount,
       dayUnratedCount,
+      questionTotalCount,
+      questionRatedCount,
+      questionGreenCount,
+      questionRedCount,
+      questionUnratedCount,
       journalCount,
       consistentJournalCount,
       consistencyRate,
@@ -408,6 +487,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         toggleDayCompletion,
         rateDay,
         updateDayNotes,
+        rateQuestion,
+        updateQuestionNotes,
         addJournalEntry,
         deleteJournalEntry,
         exportDataJson,

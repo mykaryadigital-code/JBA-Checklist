@@ -41,6 +41,7 @@ export const BottomNav: React.FC = () => {
       id: 'questions',
       label: 'Soalan',
       icon: <MessageSquareQuote className="w-5 h-5" />,
+      badge: stats.questionRatedCount > 0 ? `${stats.questionRatedCount}/32` : undefined,
     },
   ];
 
