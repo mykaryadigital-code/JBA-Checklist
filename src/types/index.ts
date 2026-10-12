@@ -84,4 +84,4 @@ export interface Candidate {
   journal: JournalEntry[];
 }
 
-export type ActiveTab = 'checklist' | 'guide30' | 'analysis' | 'journal' | 'questions';
+export type ActiveTab = 'home' | 'checklist' | 'guide30' | 'analysis' | 'journal' | 'questions';

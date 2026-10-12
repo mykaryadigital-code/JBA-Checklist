@@ -59,7 +59,7 @@ interface AppContextType {
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [activeTab, setActiveTab] = useState<ActiveTab>('checklist');
+  const [activeTab, setActiveTab] = useState<ActiveTab>('home');
   const [state, setState] = useState(() => loadAppState());
 
   // Save to localStorage whenever state changes
