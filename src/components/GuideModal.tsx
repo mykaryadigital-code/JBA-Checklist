@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, HeartHandshake, ShieldCheck, CheckCircle2, AlertTriangle, BookOpen } from 'lucide-react';
+import { X, HeartHandshake, ShieldCheck, CheckCircle2, AlertTriangle, BookOpen, Sparkles, ExternalLink } from 'lucide-react';
 
 interface GuideModalProps {
   isOpen: boolean;
@@ -92,7 +92,25 @@ export const GuideModal: React.FC<GuideModalProps> = ({ isOpen, onClose }) => {
             </div>
           </div>
 
-          <div className="pt-2 border-t border-slate-200">
+          <div className="pt-2 border-t border-slate-200 space-y-2">
+            <a
+              href="https://saudagarpantaimanis.bcl.my/form/janda-bukan-akhir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full flex items-center justify-between p-3 rounded-xl bg-gradient-to-r from-[#fff0f5] to-[#ffe4ee] border border-[#fcc2d7] hover:border-[#f48fb1] hover:shadow-xs transition-all cursor-pointer group text-left"
+            >
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-lg bg-[#d70f64] text-white flex items-center justify-center shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
+                  <Sparkles className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold text-[#d70f64] uppercase block">Belum Dapatkan Pakej Penuh?</span>
+                  <span className="text-xs font-black text-slate-900 block leading-tight">Dapatkan Pakej Janda Bukan Akhir</span>
+                </div>
+              </div>
+              <ExternalLink className="w-4 h-4 text-[#d70f64] shrink-0" />
+            </a>
+
             <button
               onClick={onClose}
               className="w-full py-2.5 bg-gradient-to-b from-[#ff2b85] to-[#d70f64] hover:brightness-105 text-white rounded-xl text-xs font-bold border-t border-white/30 border-b-[4px] border-b-[#9f0747] shadow-[0_4px_12px_rgba(215,15,100,0.3)] active:translate-y-0.5 active:border-b-[1px] transition-all cursor-pointer"

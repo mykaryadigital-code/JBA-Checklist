@@ -10,7 +10,8 @@ import {
   Heart,
   ChevronRight,
   Sparkles,
-  ShieldCheck
+  ShieldCheck,
+  ExternalLink
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { ActiveTab } from '../types';
@@ -276,6 +277,43 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </div>
           </div>
         </div>
+      </div>
+
+      {/* =========================================================================
+          PAKEJ JANDA BUKAN AKHIR CALL-TO-ACTION (Untuk Yang Belum Membeli Pakej)
+         ========================================================================= */}
+      <div className="w-full max-w-md px-4 mt-4">
+        <a
+          href="https://saudagarpantaimanis.bcl.my/form/janda-bukan-akhir"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full group block p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-[#fff0f5] via-[#ffe4ee] to-[#fde2ec] border-2 border-[#f48fb1] shadow-[0_4px_16px_rgba(215,15,100,0.12)] hover:shadow-[0_6px_22px_rgba(215,15,100,0.22)] active:scale-[0.99] transition-all cursor-pointer"
+        >
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-[#e64980] via-[#d70f64] to-[#c2185b] text-white flex items-center justify-center shadow-xs flex-shrink-0 group-hover:scale-105 transition-transform">
+                <Sparkles className="w-5 h-5 text-white" />
+              </div>
+              <div className="text-left">
+                <div className="flex items-center gap-1.5 mb-0.5">
+                  <span className="text-[10px] font-black text-[#d70f64] uppercase tracking-wider bg-white px-2 py-0.5 rounded-full border border-[#fcc2d7]">
+                    Pakej Penuh
+                  </span>
+                  <span className="text-[11px] text-slate-500 font-medium">Belum dapatkan pakej?</span>
+                </div>
+                <h4 className="text-[13.5px] sm:text-[14.5px] font-black text-slate-900 leading-tight">
+                  Dapatkan Pakej Janda Bukan Akhir
+                </h4>
+                <p className="text-[11px] sm:text-[11.5px] text-slate-600 mt-0.5 leading-snug">
+                  Klik di sini untuk akses modul, panduan penuh & bimbingan eksklusif
+                </p>
+              </div>
+            </div>
+            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white border border-[#fcc2d7] flex items-center justify-center text-[#d70f64] group-hover:bg-[#d70f64] group-hover:text-white transition-colors shadow-2xs">
+              <ExternalLink className="w-4 h-4" />
+            </div>
+          </div>
+        </a>
       </div>
 
       {/* Reassurance Footer Quote */}
